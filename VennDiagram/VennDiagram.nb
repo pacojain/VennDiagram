@@ -1,0 +1,50 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1158,         40]
+NotebookOptionsPosition[       731,         25]
+NotebookOutlinePosition[      1262,         42]
+CellTagsIndexPosition[      1219,         39]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"<<", 
+  "VennDiagram`"}], "\[IndentingNewLine]", "VennDiagram1"}], "Input",
+ CellChangeTimes->{{3.6258625432200456`*^9, 3.6258625637411776`*^9}}]
+},
+WindowSize->{701, 797},
+WindowMargins->{{447, Automatic}, {Automatic, 30}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (March 5, 2013)",
+StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "C:", "Users", "pacoj", 
+   "AppData", "Roaming", "Mathematica", "SystemFiles", "FrontEnd", 
+   "StyleSheets"}, "Default_Paco.nb", CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 170, 3, 61, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
