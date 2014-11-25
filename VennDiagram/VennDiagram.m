@@ -24,17 +24,19 @@ Begin["`Private`"]
 (*SetAttributes[VennDiagram1, HoldAll]*)
 VennDiagram[listA_List, listB_List, listU_List: {9,10}]= Module[
 	{
-		i, k,
+		i, k, n21, n22, n23, n24,
 		gl21, gl22, gl23, gl24,
 		exp21, exp22, exp23, exp24,
 		expList, glList, expParts,
 		setNameA, setNameB, setNameU,
-		showSetContents, aOnly, bOnly, aAndb, noneOfThem,
+		setSizeA, setSizeB, setSizeU, setSizeAandB,
+		aOnly, bOnly, aAndb, noneOfThem,
+		showSetContents, showSetSizes,
 		lineThickness= 0.005
 	},
 	Manipulate[
 		expList = {exp21, exp22, exp23, exp24};
-		glList = {gl21, gl22, gl23, gl24};
+		glList =  {gl21, gl22, gl23, gl24};
 		expParts = Union @@ Pick[expList, glList, 0.8];
 		(* Define graphical buttons *)
 		aOnly= Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl21]],
@@ -80,6 +82,43 @@ VennDiagram[listA_List, listB_List, listU_List: {9,10}]= Module[
 		exp22= Complement[listB, listA];
 		exp23= Intersection[listA, listB];
 		exp24= Complement[ listU, Union[listA, listB] ];
+		{n21, n22, n23, n24} = Length /@ {exp21, exp22, exp23, exp24};
+		setSizeA= Graphics[ 
+			Inset[
+				Text[
+					Style[n21, Black, Bold, 14], 
+					FormatType -> StandardForm
+				],
+				{-1.2, 0.0}
+			]
+		];
+		setSizeB= Graphics[ 
+			Inset[
+				Text[
+					Style[n22, Black, Bold, 14], 
+					FormatType -> StandardForm
+				],
+				{1.2, 0.0}
+			]
+		];
+		setSizeAandB= Graphics[ 
+			Inset[
+				Text[
+					Style[n23, Black, Bold, 14], 
+					FormatType -> StandardForm
+				],
+				{0.0, 0}
+			]
+		];
+		setSizeU= Graphics[ 
+			Inset[
+				Text[
+					Style[n24, Black, Bold, 14], 
+					FormatType -> StandardForm
+				],
+				{0.0, 1.2}
+			]
+		];
 		setNameU= Graphics[ 
 			Inset[
 				Text[
@@ -106,6 +145,7 @@ VennDiagram[listA_List, listB_List, listU_List: {9,10}]= Module[
 				"",
 				Show[
 					noneOfThem, aOnly, bOnly, aAndb,
+					If[showSetSizes,    Unevaluated[Sequence[setSizeA, setSizeB, setSizeU, setSizeAandB]], Graphics[] ],
 					If[showSetContents, Unevaluated[Sequence[setNameA, setNameB, setNameU]], Graphics[] ],
 					ImageSize -> {540, 300}
 				],
@@ -119,6 +159,7 @@ VennDiagram[listA_List, listB_List, listU_List: {9,10}]= Module[
 		{{gl22, 1}, ControlType -> None},
 		{{gl23, 1}, ControlType -> None},
 		{{gl24, 1}, ControlType -> None},
+		{{showSetSizes, True, "show set sizes"}, {True, False}},
 		{{showSetContents, True, "show set contents"}, {True, False}},
 		TrackedSymbols -> True,
 		Initialization :> (
