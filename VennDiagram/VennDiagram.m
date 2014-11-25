@@ -21,12 +21,16 @@ VennDiagram1::usage= "Produces an interactive Venn diagram graphic"
 Begin["`Private`"]
 (* Implementation of the package *)
 
-VennDiagram1= Module[
+(*SetAttributes[VennDiagram1, HoldAll]*)
+VennDiagram1:= Module[
 	{
-		setNot, aOnly
+		k, (*gl21, gl22, gl23, gl24,*) setNotations,
+		setNot, aOnly, bOnly, aAndb, noneOfThem,
+		lineThickness= 0.005
 	},
 	Manipulate[
-		aOnly= Graphics[{EdgeForm[Thick], Dynamic[GrayLevel[gl21]],
+		(* Define graphical buttons *)
+		aOnly= Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl21]],
 			Button[Polygon[{
 				Join[
 					Table[{Cos[Pi/(3 k) i] - 1/2, Sin[Pi/(3 k) i]}, {i, k, 5 k}],
@@ -40,38 +44,80 @@ VennDiagram1= Module[
 				FormatType -> StandardForm], {-1.4, 0.8}
 			]
 		}];
+		bOnly = Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl22]], 
+			Button[Polygon[{
+				Join[
+					Table[{Cos[Pi/(3 k) i] - 1/2, Sin[Pi/(3 k) i]}, {i, -k, k}],
+					Reverse[
+						Table[{Cos[Pi/(3 k) i] + 1/2, Sin[Pi/(3 k) i]}, {i, -2 k, 2 k}]
+					]
+				]
+			}],
+			gl22 = 1.8 - gl22],
+			Inset[Text[Style["B", Black, Italic, Large], 
+				FormatType -> StandardForm], {1.4, 0.8}
+			]
+		}];
+		aAndb = Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl23]], 
+			Button[Polygon[{
+				Join[
+					Table[{Cos[Pi/(3 k) i] - 1/2, Sin[Pi/(3 k) i]}, {i, -k, k}],
+					Table[{Cos[Pi/(3 k) i] + 1/2, Sin[Pi/(3 k) i]}, {i, 2 k, 4 k}]
+				]
+			}],
+			gl23 = 1.8 - gl23]
+		}];
+		noneOfThem = Graphics[{EdgeForm[Thickness[1.5 lineThickness]], Dynamic[GrayLevel[gl24]], 
+			Button[Polygon[{
+				{-2, -2.3}, {2, -2.3}, {2, 1.5}, {-2, 1.5}, {-2, -2.3}
+			}],
+			gl24 = 1.8 - gl24],
+			Inset[Text[Style["U", Black, Italic, Large], 
+			FormatType -> StandardForm], {2.2, 1.4}]
+		}];
+
+		setNotations="0";
 		Pane[
 			Column[{
-				Show[aOnly, ImageSize -> {540, 300}],
+				"",
+				Show[
+					noneOfThem, aOnly, bOnly, aAndb,
+					ImageSize -> {540, 300}
+				],
 				"",
 				If[setNot, setNotations, Invisible[setNotations]]
 			}, Alignment -> Center], 
-			ImageSize -> {540, 460}
+			ImageSize -> {540, 600}
 		],
-		{{gl21, 1}, ControlType -> None},	
+		{{gl21, 1}, ControlType -> None},
+		{{gl22, 1}, ControlType -> None},
+		{{gl23, 1}, ControlType -> None},
+		{{gl24, 1}, ControlType -> None},
 		{{setNot, True, "show set notation"}, {True, False}},
-		Initialization :> 
-			(k = 12;
-   exp1 = a && ! b && ! c;
-   exp2 = b && ! a && ! c;
-   exp3 = c && ! a && ! b;
-   exp4 = a && b && ! c;
-   exp5 = a && c && ! b;
-   exp6 = b && c && ! a;
-   exp7 = a && b && c;
-   exp8 = ! a && ! b && ! c;
-   
-   exp21 = a && ! b;
-   exp22 = b && ! a;
-   exp23 = a && b;
-   exp24 = ! a && ! b;
-   
-   replacementsList = {"&&" -> "\[Intersection]", "||" -> "\[Union]", 
-     "!A" -> "\!\(\*SuperscriptBox[\(A\), \(\[Prime]\)]\)", 
-     "!B" -> "\!\(\*SuperscriptBox[\(B\), \(\[Prime]\)]\)", 
-     "!C" -> "\!\(\*SuperscriptBox[\(C\), \(\[Prime]\)]\)", 
-     "FALSE" -> "\[EmptySet]", "TRUE" -> "U"})
- ]
+		TrackedSymbols -> True,
+		Initialization :> (
+			k = 12;
+			exp1 = a && ! b && ! c;
+			exp2 = b && ! a && ! c;
+			exp3 = c && ! a && ! b;
+			exp4 = a && b && ! c;
+			exp5 = a && c && ! b;
+			exp6 = b && c && ! a;
+			exp7 = a && b && c;
+			exp8 = ! a && ! b && ! c;
+
+			exp21 = a && ! b;
+			exp22 = b && ! a;
+			exp23 = a && b;
+			exp24 = ! a && ! b;
+
+			replacementsList = {"&&" -> "\[Intersection]", "||" -> "\[Union]", 
+				"!A" -> "\!\(\*SuperscriptBox[\(A\), \(\[Prime]\)]\)", 
+				"!B" -> "\!\(\*SuperscriptBox[\(B\), \(\[Prime]\)]\)", 
+				"!C" -> "\!\(\*SuperscriptBox[\(C\), \(\[Prime]\)]\)", 
+				"FALSE" -> "\[EmptySet]", "TRUE" -> "U"
+			}
+		)
 	]
 ]
 
