@@ -22,10 +22,11 @@ Begin["`Private`"]
 (* Implementation of the package *)
 
 (*SetAttributes[VennDiagram1, HoldAll]*)
-VennDiagram1:= Module[
+VennDiagram1[listU_, x_]= Module[
 	{
-		k, (*gl21, gl22, gl23, gl24,*) setNotations,
-		setNot, aOnly, bOnly, aAndb, noneOfThem,
+		i, k, gl21, gl22, gl23, gl24,
+		setNameA, setNameB, setNameU,
+		showSetContents, aOnly, bOnly, aAndb, noneOfThem,
 		lineThickness= 0.005
 	},
 	Manipulate[
@@ -40,7 +41,7 @@ VennDiagram1:= Module[
 				]
 			}],
 			gl21 = 1.8 - gl21], 
-			Inset[Text[Style["A", Black, Italic, Large],
+			Inset[Text[Style["A", Black, Italic, 17],
 				FormatType -> StandardForm], {-1.4, 0.8}
 			]
 		}];
@@ -54,7 +55,7 @@ VennDiagram1:= Module[
 				]
 			}],
 			gl22 = 1.8 - gl22],
-			Inset[Text[Style["B", Black, Italic, Large], 
+			Inset[Text[Style["B", Black, Italic, 17], 
 				FormatType -> StandardForm], {1.4, 0.8}
 			]
 		}];
@@ -72,20 +73,39 @@ VennDiagram1:= Module[
 				{-2, -2.3}, {2, -2.3}, {2, 1.5}, {-2, 1.5}, {-2, -2.3}
 			}],
 			gl24 = 1.8 - gl24],
-			Inset[Text[Style["U", Black, Italic, Large], 
-			FormatType -> StandardForm], {2.2, 1.4}]
+			Inset[Text[Style["U", Black, Italic, 17], 
+			FormatType -> StandardForm], {-2.2, 1.8}]
 		}];
 
-		setNotations="0";
+		setNameU= Graphics[ 
+			Inset[
+				Text[
+					Style[" = ", Black, 17], 
+					FormatType -> StandardForm
+				],
+				{-1.8, 1.8}
+			]
+		];
+		setNameA= Graphics[
+			Inset[
+				Text[Style["A = ", Black, 17, Italic]],
+				{-1.6, -1.6}
+			]
+		];
+		setNameB= Graphics[
+			Inset[
+				Text[Style["B = ", Black, 17, Italic]],
+				{-1.6, -2.1}
+			]
+		];
 		Pane[
 			Column[{
 				"",
 				Show[
 					noneOfThem, aOnly, bOnly, aAndb,
+					If[showSetContents, Unevaluated[Sequence[setNameA, setNameB, setNameU]], Graphics[] ],
 					ImageSize -> {540, 300}
-				],
-				"",
-				If[setNot, setNotations, Invisible[setNotations]]
+				]
 			}, Alignment -> Center], 
 			ImageSize -> {540, 600}
 		],
@@ -93,7 +113,7 @@ VennDiagram1:= Module[
 		{{gl22, 1}, ControlType -> None},
 		{{gl23, 1}, ControlType -> None},
 		{{gl24, 1}, ControlType -> None},
-		{{setNot, True, "show set notation"}, {True, False}},
+		{{showSetContents, True, "show set contents"}, {True, False}},
 		TrackedSymbols -> True,
 		Initialization :> (
 			k = 12;

@@ -10,21 +10,258 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      1158,         40]
-NotebookOptionsPosition[       731,         25]
-NotebookOutlinePosition[      1262,         42]
-CellTagsIndexPosition[      1219,         39]
+NotebookDataLength[     12029,        280]
+NotebookOptionsPosition[     11507,        261]
+NotebookOutlinePosition[     12057,        279]
+CellTagsIndexPosition[     12014,        276]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[{
- RowBox[{"<<", 
-  "VennDiagram`"}], "\[IndentingNewLine]", "VennDiagram1"}], "Input",
- CellChangeTimes->{{3.6258625432200456`*^9, 3.6258625637411776`*^9}}]
+ RowBox[{"<<", "VennDiagram`"}], "\[IndentingNewLine]", 
+ RowBox[{"VennDiagram1", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "3"}], "}"}], ",", "2"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6258625432200456`*^9, 3.6258625637411776`*^9}, {
+  3.6259248287153606`*^9, 3.625924829464156*^9}, {3.6259259931104794`*^9, 
+  3.6259259933600793`*^9}, {3.6259284149764833`*^9, 3.6259284175660834`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{VennDiagram`Private`gl21$$ = 1, 
+    VennDiagram`Private`gl22$$ = 1, VennDiagram`Private`gl23$$ = 1, 
+    VennDiagram`Private`gl24$$ = 1, VennDiagram`Private`showSetNames$48864$$ =
+     True, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[VennDiagram`Private`gl21$$], 1}}, {{
+       Hold[VennDiagram`Private`gl22$$], 1}}, {{
+       Hold[VennDiagram`Private`gl23$$], 1}}, {{
+       Hold[VennDiagram`Private`gl24$$], 1}}, {{
+       Hold[VennDiagram`Private`showSetNames$48864$$], True, 
+       "show set notation"}, {True, False}}}, Typeset`size$$ = {
+    540., {296., 304.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, 
+    VennDiagram`Private`showSetNames$48864$48865$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {
+       VennDiagram`Private`gl21$$ = 1, VennDiagram`Private`gl22$$ = 1, 
+        VennDiagram`Private`gl23$$ = 1, VennDiagram`Private`gl24$$ = 1, 
+        VennDiagram`Private`showSetNames$48864$$ = True}, 
+      "ControllerVariables" :> {
+        Hold[
+        VennDiagram`Private`showSetNames$48864$$, 
+         VennDiagram`Private`showSetNames$48864$48865$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (VennDiagram`Private`aOnly$48864 = Graphics[{
+           EdgeForm[
+            Thickness[VennDiagram`Private`lineThickness$48864]], 
+           Dynamic[
+            GrayLevel[VennDiagram`Private`gl21$$]], 
+           Button[
+            Polygon[{
+              Join[
+               
+               Table[{Cos[
+                  Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                   VennDiagram`Private`i] - 1/2, 
+                 Sin[
+                 Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                  VennDiagram`Private`i]}, {
+                VennDiagram`Private`i, VennDiagram`Private`k$48864, 5 
+                 VennDiagram`Private`k$48864}], 
+               Reverse[
+                
+                Table[{Cos[
+                   Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                    VennDiagram`Private`i] + 1/2, 
+                  Sin[
+                  Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                   VennDiagram`Private`i]}, {
+                 VennDiagram`Private`i, 2 VennDiagram`Private`k$48864, 4 
+                  VennDiagram`Private`k$48864}]]]}], 
+            VennDiagram`Private`gl21$$ = 1.8 - VennDiagram`Private`gl21$$], 
+           Inset[
+            Text[
+             Style["A", Black, Italic, 17], FormatType -> 
+             StandardForm], {-1.4, 0.8}]}]; 
+       VennDiagram`Private`bOnly$48864 = Graphics[{
+           EdgeForm[
+            Thickness[VennDiagram`Private`lineThickness$48864]], 
+           Dynamic[
+            GrayLevel[VennDiagram`Private`gl22$$]], 
+           Button[
+            Polygon[{
+              Join[
+               
+               Table[{Cos[
+                  Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                   VennDiagram`Private`i] - 1/2, 
+                 Sin[
+                 Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                  VennDiagram`Private`i]}, {
+                VennDiagram`Private`i, -VennDiagram`Private`k$48864, 
+                 VennDiagram`Private`k$48864}], 
+               Reverse[
+                
+                Table[{Cos[
+                   Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                    VennDiagram`Private`i] + 1/2, 
+                  Sin[
+                  Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                   VennDiagram`Private`i]}, {
+                 VennDiagram`Private`i, (-2) VennDiagram`Private`k$48864, 2 
+                  VennDiagram`Private`k$48864}]]]}], 
+            VennDiagram`Private`gl22$$ = 1.8 - VennDiagram`Private`gl22$$], 
+           Inset[
+            Text[
+             Style["B", Black, Italic, 17], FormatType -> StandardForm], {1.4,
+             0.8}]}]; VennDiagram`Private`aAndb$48864 = Graphics[{
+           EdgeForm[
+            Thickness[VennDiagram`Private`lineThickness$48864]], 
+           Dynamic[
+            GrayLevel[VennDiagram`Private`gl23$$]], 
+           Button[
+            Polygon[{
+              Join[
+               
+               Table[{Cos[
+                  Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                   VennDiagram`Private`i] - 1/2, 
+                 Sin[
+                 Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                  VennDiagram`Private`i]}, {
+                VennDiagram`Private`i, -VennDiagram`Private`k$48864, 
+                 VennDiagram`Private`k$48864}], 
+               
+               Table[{Cos[
+                  Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                   VennDiagram`Private`i] + 1/2, 
+                 Sin[
+                 Pi (3 VennDiagram`Private`k$48864)^(-1) 
+                  VennDiagram`Private`i]}, {
+                VennDiagram`Private`i, 2 VennDiagram`Private`k$48864, 4 
+                 VennDiagram`Private`k$48864}]]}], VennDiagram`Private`gl23$$ = 
+            1.8 - VennDiagram`Private`gl23$$]}]; 
+       VennDiagram`Private`noneOfThem$48864 = Graphics[{
+           EdgeForm[
+            Thickness[1.5 VennDiagram`Private`lineThickness$48864]], 
+           Dynamic[
+            GrayLevel[VennDiagram`Private`gl24$$]], 
+           Button[
+            Polygon[{{-2, -2.3}, {2, -2.3}, {2, 1.5}, {-2, 1.5}, {-2, -2.3}}],
+             VennDiagram`Private`gl24$$ = 1.8 - VennDiagram`Private`gl24$$], 
+           Inset[
+            Text[
+             Style["U", Black, Italic, 17], FormatType -> 
+             StandardForm], {-2.2, 1.8}]}]; 
+       VennDiagram`Private`setNameU$48864 = Graphics[
+          Inset[
+           Text[
+            Style[" = ", Black, 17], FormatType -> StandardForm], {-1.8, 
+           1.8}]]; VennDiagram`Private`setNameA$48864 = Graphics[
+          Inset[
+           Text[
+            Style["A = ", Black, 17, Italic]], {-1.8, -2.6}]]; 
+       VennDiagram`Private`setNameB$48864 = Graphics[
+          Inset[
+           Text[
+            Style["B = ", Black, 17, Italic]], {-1.8, -3.1}]]; Pane[
+         Column[{"", 
+           Show[
+           VennDiagram`Private`noneOfThem$48864, 
+            VennDiagram`Private`aOnly$48864, VennDiagram`Private`bOnly$48864, 
+            VennDiagram`Private`aAndb$48864, 
+            If[VennDiagram`Private`showSetNames$48864$$, 
+             Unevaluated[
+              Sequence[
+              VennDiagram`Private`setNameA$48864, 
+               VennDiagram`Private`setNameB$48864, 
+               VennDiagram`Private`setNameU$48864]], 
+             Invisible[VennDiagram`Private`setNameU$48864]], 
+            ImageSize -> {540, 300}]}, Alignment -> Center], 
+         ImageSize -> {540, 600}]), 
+      "Specifications" :> {{{VennDiagram`Private`gl21$$, 1}, ControlType -> 
+         None}, {{VennDiagram`Private`gl22$$, 1}, ControlType -> None}, {{
+         VennDiagram`Private`gl23$$, 1}, ControlType -> None}, {{
+         VennDiagram`Private`gl24$$, 1}, ControlType -> None}, {{
+         VennDiagram`Private`showSetNames$48864$$, True, 
+          "show set notation"}, {True, False}}}, 
+      "Options" :> {TrackedSymbols -> True}, "DefaultOptions" :> {}],
+     ImageSizeCache->{591., {344., 351.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>((VennDiagram`Private`k$48864 = 12; 
+      VennDiagram`Private`exp1 = And[VennDiagram`Private`a, 
+         Not[VennDiagram`Private`b], 
+         Not[VennDiagram`Private`c]]; 
+      VennDiagram`Private`exp2 = And[VennDiagram`Private`b, 
+         Not[VennDiagram`Private`a], 
+         Not[VennDiagram`Private`c]]; 
+      VennDiagram`Private`exp3 = And[VennDiagram`Private`c, 
+         Not[VennDiagram`Private`a], 
+         Not[VennDiagram`Private`b]]; 
+      VennDiagram`Private`exp4 = 
+       And[VennDiagram`Private`a, VennDiagram`Private`b, 
+         Not[VennDiagram`Private`c]]; 
+      VennDiagram`Private`exp5 = 
+       And[VennDiagram`Private`a, VennDiagram`Private`c, 
+         Not[VennDiagram`Private`b]]; 
+      VennDiagram`Private`exp6 = 
+       And[VennDiagram`Private`b, VennDiagram`Private`c, 
+         Not[VennDiagram`Private`a]]; 
+      VennDiagram`Private`exp7 = 
+       And[VennDiagram`Private`a, VennDiagram`Private`b, 
+         VennDiagram`Private`c]; VennDiagram`Private`exp8 = And[
+         Not[VennDiagram`Private`a], 
+         Not[VennDiagram`Private`b], 
+         Not[VennDiagram`Private`c]]; 
+      VennDiagram`Private`exp21 = And[VennDiagram`Private`a, 
+         Not[VennDiagram`Private`b]]; 
+      VennDiagram`Private`exp22 = And[VennDiagram`Private`b, 
+         Not[VennDiagram`Private`a]]; 
+      VennDiagram`Private`exp23 = 
+       And[VennDiagram`Private`a, VennDiagram`Private`b]; 
+      VennDiagram`Private`exp24 = And[
+         Not[VennDiagram`Private`a], 
+         Not[VennDiagram`Private`b]]; 
+      VennDiagram`Private`replacementsList = {
+        "&&" -> "\[Intersection]", "||" -> "\[Union]", "!A" -> 
+         "\!\(\*SuperscriptBox[\(A\), \(\[Prime]\)]\)", "!B" -> 
+         "\!\(\*SuperscriptBox[\(B\), \(\[Prime]\)]\)", "!C" -> 
+         "\!\(\*SuperscriptBox[\(C\), \(\[Prime]\)]\)", "FALSE" -> 
+         "\[EmptySet]", "TRUE" -> "U"}); Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.6259284218872833`*^9, 3.6259285530660834`*^9, 3.6259286233032837`*^9, {
+   3.625928713948283*^9, 3.6259287548242836`*^9}, 3.6259288010686836`*^9, 
+   3.6259291066024837`*^9, 3.6259291776910834`*^9, 3.6259292410642834`*^9, 
+   3.6259294762954836`*^9, 3.625929561885158*^9, 3.6259295988136477`*^9, 
+   3.6259296411884327`*^9, 3.625929729045144*^9, 3.6259298611942115`*^9, 
+   3.6259298989635696`*^9, 3.625929943288885*^9, {3.6259300253377595`*^9, 
+   3.6259300526873837`*^9}, {3.62593008765576*^9, 3.625930098903288*^9}, {
+   3.625930164163993*^9, 3.625930203543393*^9}, 3.625930256205393*^9}]
+}, Open  ]]
 },
-WindowSize->{701, 797},
-WindowMargins->{{447, Automatic}, {Automatic, 30}},
+WindowSize->{1902, 918},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+ShowSelection->True,
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (March 5, 2013)",
 StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "C:", "Users", "pacoj", 
    "AppData", "Roaming", "Mathematica", "SystemFiles", "FrontEnd", 
@@ -41,10 +278,12 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 170, 3, 61, "Input"]
+Cell[CellGroupData[{
+Cell[579, 22, 420, 8, 61, "Input"],
+Cell[1002, 32, 10489, 226, 712, "Output"]
+}, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
