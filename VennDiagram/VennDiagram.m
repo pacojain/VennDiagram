@@ -81,15 +81,11 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]= Module[
 			Graphics[ { If[ gl25 != 1, EdgeForm[Thickness[0.6 lineThickness]], Unevaluated[Sequence[]] ],
 				Dynamic[GrayLevel[gl25]],
 				Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {2.1, -2.3}}],
-				Inset[Text[Style["U", Black, Italic, 17], 
-				FormatType -> StandardForm], {-2.2, 1.8}]
-			}],
-			Graphics[ 
 				Inset[
 					Text[Style[n25, Red, Bold, 14], FormatType -> StandardForm],
 					{2.3, -2.15} 
 				]
-			],
+			}],
 			Graphics[{Opacity[0],
 				Button[Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {2.1, -2.3}}],
 					gl25 = 1.8 - gl25
@@ -163,7 +159,6 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]= Module[
 		];
 		Pane[
 			Column[{
-				"",
 				Show[
 					noneOfThem, aOnly, bOnly, aAndb, If[ n25 != 0, Unevaluated[seeExtra], Unevaluated[Sequence[]] ],
 					If[showSetSizes,    Unevaluated[Sequence[setSizeA, setSizeB, setSizeU, setSizeAandB]], Unevaluated[Sequence[]] ],
@@ -171,8 +166,9 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]= Module[
 					ImageSize -> {540, 300}
 				],
 				Short[expParts, 3]
-			}, Alignment -> Center], 
-			ImageSize -> {540, 600}
+				}, Alignment -> Center
+			], 
+			ImageSize -> {540, 500}
 		],
 
 		(* Define controls and initialization *)
