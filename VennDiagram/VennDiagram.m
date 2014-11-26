@@ -101,8 +101,8 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]= Module[
 		exp21= Complement[listA, listB];
 		exp22= Complement[listB, listA];
 		exp23= Intersection[listA, listB];
-		exp24= If[listUin === "All" || listUin === All, {}, Complement[ listU, Union[listA, listB] ]];
-		exp25= If[listUin === "All" || listUin === All, {}, Complement[ Union[listA, listB], listU ]];
+		exp24= Complement[ listU, Union[listA, listB] ];
+		exp25= Complement[ Union[listA, listB], listU ];
 		{n21, n22, n23, n24, n25} = Length /@ {exp21, exp22, exp23, exp24, exp25};
 		setSizeA= Graphics[ 
 			Inset[
