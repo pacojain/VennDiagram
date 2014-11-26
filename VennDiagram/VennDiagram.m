@@ -170,7 +170,7 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]= Module[
 					If[showSetContents, Unevaluated[Sequence[setNameA, setNameB, setNameU]], Unevaluated[Sequence[]] ],
 					ImageSize -> {540, 300}
 				],
-				Short[expParts, 10]
+				Short[expParts, 3]
 			}, Alignment -> Center], 
 			ImageSize -> {540, 600}
 		],
