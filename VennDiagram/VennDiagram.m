@@ -22,21 +22,22 @@ Begin["`Private`"]
 (* Implementation of the package *)
 
 (*SetAttributes[VennDiagram1, HoldAll]*)
-VennDiagram[listA_List, listB_List, listU_List: {9,10}]= Module[
+VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]= Module[
 	{
-		i, k, n21, n22, n23, n24,
-		gl21, gl22, gl23, gl24,
-		exp21, exp22, exp23, exp24,
+		i, k, seeExtra,
+		n21, n22, n23, n24, n25,
+		gl21, gl22, gl23, gl24, gl25,
 		expList, glList, expParts,
-		setNameA, setNameB, setNameU,
+		exp21, exp22, exp23, exp24, exp25,
+		setNameA, setNameB, setNameU, setSizeO,
 		setSizeA, setSizeB, setSizeU, setSizeAandB,
 		aOnly, bOnly, aAndb, noneOfThem,
 		showSetContents, showSetSizes,
-		lineThickness= 0.005
+		listU, lineThickness= 0.005
 	},
 	Manipulate[
-		expList = {exp21, exp22, exp23, exp24};
-		glList =  {gl21, gl22, gl23, gl24};
+		expList = {exp21, exp22, exp23, exp24, exp25};
+		glList =  {gl21, gl22, gl23, gl24, gl25};
 		expParts = Union @@ Pick[expList, glList, 0.8];
 		(* Define graphical buttons *)
 		aOnly= Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl21]],
@@ -76,13 +77,36 @@ VennDiagram[listA_List, listB_List, listU_List: {9,10}]= Module[
 			Inset[Text[Style["U", Black, Italic, 17], 
 			FormatType -> StandardForm], {-2.2, 1.8}]
 		}];
+		seeExtra =
+			Graphics[{If[gl25 != 1, Unevaluated[Sequence[EdgeForm[Thickness[0.6 lineThickness]], Dynamic[GrayLevel[gl25]] ]], Dynamic[GrayLevel[gl25]] ], 
+				Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {2.1, -2.3}}],
+				Inset[Text[Style["U", Black, Italic, 17], 
+				FormatType -> StandardForm], {-2.2, 1.8}]
+			}];
+			(*Graphics[ 
+				Inset[
+					Text[
+						Style[n25, Red, Bold, 14], 
+						FormatType -> StandardForm
+					],
+					{2.3, -2.15}
+				]
+			];*)
+		seeExtra2=	Graphics[{Opacity[0],
+				Button[Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {2.1, -2.3}}],
+					gl25 = 1.8 - gl25
+				],
+				Inset[Text[Style["U", Black, Italic, 17], 
+				FormatType -> StandardForm], {-2.2, 1.8}]
+			}];
 
 		(* Define display text *)
 		exp21= Complement[listA, listB];
 		exp22= Complement[listB, listA];
 		exp23= Intersection[listA, listB];
-		exp24= Complement[ listU, Union[listA, listB] ];
-		{n21, n22, n23, n24} = Length /@ {exp21, exp22, exp23, exp24};
+		exp24= If[listUin === "All" || listUin === All, {}, Complement[ listU, Union[listA, listB] ]];
+		exp25= If[listUin === "All" || listUin === All, {}, Complement[ Union[listA, listB], listU ]];
+		{n21, n22, n23, n24, n25} = Length /@ {exp21, exp22, exp23, exp24, exp25};
 		setSizeA= Graphics[ 
 			Inset[
 				Text[
@@ -119,6 +143,15 @@ VennDiagram[listA_List, listB_List, listU_List: {9,10}]= Module[
 				{0.0, 1.2}
 			]
 		];
+		setSizeO= Graphics[ 
+			Inset[
+				Text[
+					Style[n25, Red, Bold, 14], 
+					FormatType -> StandardForm
+				],
+				{2.3, -2.15}
+			]
+		];
 		setNameU= Graphics[ 
 			Inset[
 				Text[
@@ -144,12 +177,12 @@ VennDiagram[listA_List, listB_List, listU_List: {9,10}]= Module[
 			Column[{
 				"",
 				Show[
-					noneOfThem, aOnly, bOnly, aAndb,
+					noneOfThem, aOnly, bOnly, aAndb, seeExtra, setSizeO, seeExtra2,
 					If[showSetSizes,    Unevaluated[Sequence[setSizeA, setSizeB, setSizeU, setSizeAandB]], Graphics[] ],
 					If[showSetContents, Unevaluated[Sequence[setNameA, setNameB, setNameU]], Graphics[] ],
 					ImageSize -> {540, 300}
 				],
-				If[listU === Null, "{}", expParts]
+				Short[expParts, 10]
 			}, Alignment -> Center], 
 			ImageSize -> {540, 600}
 		],
@@ -159,11 +192,13 @@ VennDiagram[listA_List, listB_List, listU_List: {9,10}]= Module[
 		{{gl22, 1}, ControlType -> None},
 		{{gl23, 1}, ControlType -> None},
 		{{gl24, 1}, ControlType -> None},
+		{{gl25, 1}, ControlType -> None},
 		{{showSetSizes, True, "show set sizes"}, {True, False}},
 		{{showSetContents, True, "show set contents"}, {True, False}},
 		TrackedSymbols -> True,
 		Initialization :> (
 			k = 12;
+			If[ listUin === "All" || listUin === All, listU= Union[listA, listB], listU= listUin]
 		)
 	]
 ]
