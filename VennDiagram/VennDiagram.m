@@ -29,7 +29,7 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]= Module[
 		gl21, gl22, gl23, gl24, gl25,
 		expList, glList, expParts,
 		exp21, exp22, exp23, exp24, exp25,
-		setNameA, setNameB, setNameU, setSizeO,
+		setNameA, setNameB, setNameU,
 		setSizeA, setSizeB, setSizeU, setSizeAandB,
 		aOnly, bOnly, aAndb, noneOfThem,
 		showSetContents, showSetSizes,
@@ -77,28 +77,25 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]= Module[
 			Inset[Text[Style["U", Black, Italic, 17], 
 			FormatType -> StandardForm], {-2.2, 1.8}]
 		}];
-		seeExtra =
-			Graphics[{If[gl25 != 1, Unevaluated[Sequence[EdgeForm[Thickness[0.6 lineThickness]], Dynamic[GrayLevel[gl25]] ]], Dynamic[GrayLevel[gl25]] ], 
+		seeExtra = Sequence[
+			Graphics[ { If[ gl25 != 1, EdgeForm[Thickness[0.6 lineThickness]], Unevaluated[Sequence[]] ],
+				Dynamic[GrayLevel[gl25]],
 				Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {2.1, -2.3}}],
 				Inset[Text[Style["U", Black, Italic, 17], 
 				FormatType -> StandardForm], {-2.2, 1.8}]
-			}];
-			(*Graphics[ 
+			}],
+			Graphics[ 
 				Inset[
-					Text[
-						Style[n25, Red, Bold, 14], 
-						FormatType -> StandardForm
-					],
-					{2.3, -2.15}
+					Text[Style[n25, Red, Bold, 14], FormatType -> StandardForm],
+					{2.3, -2.15} 
 				]
-			];*)
-		seeExtra2=	Graphics[{Opacity[0],
+			],
+			Graphics[{Opacity[0],
 				Button[Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {2.1, -2.3}}],
 					gl25 = 1.8 - gl25
-				],
-				Inset[Text[Style["U", Black, Italic, 17], 
-				FormatType -> StandardForm], {-2.2, 1.8}]
-			}];
+				]
+			}]
+		];
 
 		(* Define display text *)
 		exp21= Complement[listA, listB];
@@ -143,15 +140,6 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]= Module[
 				{0.0, 1.2}
 			]
 		];
-		setSizeO= Graphics[ 
-			Inset[
-				Text[
-					Style[n25, Red, Bold, 14], 
-					FormatType -> StandardForm
-				],
-				{2.3, -2.15}
-			]
-		];
 		setNameU= Graphics[ 
 			Inset[
 				Text[
@@ -177,9 +165,9 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]= Module[
 			Column[{
 				"",
 				Show[
-					noneOfThem, aOnly, bOnly, aAndb, seeExtra, setSizeO, seeExtra2,
-					If[showSetSizes,    Unevaluated[Sequence[setSizeA, setSizeB, setSizeU, setSizeAandB]], Graphics[] ],
-					If[showSetContents, Unevaluated[Sequence[setNameA, setNameB, setNameU]], Graphics[] ],
+					noneOfThem, aOnly, bOnly, aAndb, If[ n25 != 0, Unevaluated[seeExtra], Unevaluated[Sequence[]] ],
+					If[showSetSizes,    Unevaluated[Sequence[setSizeA, setSizeB, setSizeU, setSizeAandB]], Unevaluated[Sequence[]] ],
+					If[showSetContents, Unevaluated[Sequence[setNameA, setNameB, setNameU]], Unevaluated[Sequence[]] ],
 					ImageSize -> {540, 300}
 				],
 				Short[expParts, 10]
