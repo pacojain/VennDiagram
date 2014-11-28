@@ -33,7 +33,7 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]:= Module[
 		setSizeA, setSizeB, setSizeU, setSizeAandB,
 		aOnly, bOnly, aAndb, noneOfThem,
 		showSetContents, showSetSizes,
-		listU, lineThickness= 0.005
+		listU, lineThickness= 0.006
 	},
 	Manipulate[
 		expList = {exp21, exp22, exp23, exp24, exp25};
@@ -70,7 +70,7 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]:= Module[
 				gl23 = 1.8 - gl23
 			]
 		}];
-		noneOfThem = Graphics[{EdgeForm[Thickness[1.5 lineThickness]], Dynamic[GrayLevel[gl24]], 
+		noneOfThem = Graphics[{EdgeForm[Thickness[1.3 lineThickness]], Dynamic[GrayLevel[gl24]], 
 			Button[Polygon[{{-2, -2.3}, {2, -2.3}, {2, 1.5}, {-2, 1.5}, {-2, -2.3}}],
 				gl24 = 1.8 - gl24
 			],
@@ -190,7 +190,7 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]:= Module[
 
 VennDiagram2[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]:= Module[
 	{
-		i, k, seeExtra,
+		i, k, seeExtra, d=-0.67,
 		n21, n22, n23, n24, n25,
 		gl1, gl2, gl3, gl4, gl5, gl6, gl7, gl8, gl9,
 		expList, glList, expParts,
@@ -200,89 +200,89 @@ VennDiagram2[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]
 		setSizeAandC, setSizeBandC, setSizeABC,
 		aOnly, bOnly, cOnly, aAndb, bAndc, aAndc, 
 		allOfThem, noneOfThem, showSetContents, showSetSizes,
-		listU, lineThickness= 0.005
+		listU, lineThickness= 0.006
 	},
 	Manipulate[
 		aOnly= Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl1]],
 			Button[Polygon[{ Join[
-					Table[{Cos[Pi/(3 k) i] - 1/2, Sin[Pi/(3 k) i]}, {i, k, 4 k}],
-					Reverse[Table[{Cos[Pi/(3 k) i], Sin[Pi/(3 k) i] - Sqrt[3]/2}, {i, 2 k, 3 k}]],
-					Reverse[Table[{Cos[Pi/(3 k) i] + 1/2, Sin[Pi/(3 k) i]}, {i, 2 k, 3 k}]]
+					Table[{Cos[Pi/(3 k) i] - 1/2, d - Sin[Pi/(3 k) i]}, {i, k, 4 k}],
+					Reverse[Table[{Cos[Pi/(3 k) i], d - (Sin[Pi/(3 k) i] - Sqrt[3]/2)}, {i, 2 k, 3 k}]],
+					Reverse[Table[{Cos[Pi/(3 k) i] + 1/2, d - Sin[Pi/(3 k) i]}, {i, 2 k, 3 k}]]
 				] }],
 				gl1 = 1.8 - gl1
 			], 
 			Inset[Text[Style["A", Black, Italic, 17],
-				FormatType -> StandardForm], {-1.4, 0.8}
+				FormatType -> StandardForm], {-1.4, d - 0.8}
 			]
 		}];
 		bOnly = Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl2]], 
 			Button[Polygon[{ Join[
-					Table[{Cos[Pi/(3 k) i] - 1/2, Sin[Pi/(3 k) i]}, {i, 0, k}],
-					Reverse[ Table[{Cos[Pi/(3 k) i] + 1/2, Sin[Pi/(3 k) i]}, {i, -k, 2 k}] ],
-					Table[{Cos[Pi/(3 k) i], Sin[Pi/(3 k) i] - Sqrt[3]/2}, {i, 0, k}]
+					Table[{Cos[Pi/(3 k) i] - 1/2, d - Sin[Pi/(3 k) i]}, {i, 0, k}],
+					Reverse[ Table[{Cos[Pi/(3 k) i] + 1/2, d - Sin[Pi/(3 k) i]}, {i, -k, 2 k}] ],
+					Table[{Cos[Pi/(3 k) i], d - (Sin[Pi/(3 k) i] - Sqrt[3]/2)}, {i, 0, k}]
 				] }],
 				gl2 = 1.8 - gl2
 			],
 			Inset[Text[Style["B", Black, Italic, 17], 
-				FormatType -> StandardForm], {1.4, 0.8}
+				FormatType -> StandardForm], {1.4, d - 0.8}
 			]
 		}];
 		cOnly = Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl3]], 
 			Button[Polygon[{ Join[
-				Table[{Cos[Pi/(3 k) i] - 1/2, Sin[Pi/(3 k) i]}, {i, 4 k, 5 k}],
-				Table[{Cos[Pi/(3 k) i] + 1/2, Sin[Pi/(3 k) i]}, {i, 4 k, 5 k}],
-				Reverse[ Table[{Cos[Pi/(3 k) i], Sin[Pi/(3 k) i] - Sqrt[3]/2}, {i, 3 k, 6 k}]]
+				Table[{Cos[Pi/(3 k) i] - 1/2, d - Sin[Pi/(3 k) i]}, {i, 4 k, 5 k}],
+				Table[{Cos[Pi/(3 k) i] + 1/2, d - Sin[Pi/(3 k) i]}, {i, 4 k, 5 k}],
+				Reverse[ Table[{Cos[Pi/(3 k) i], d - (Sin[Pi/(3 k) i] - Sqrt[3]/2)}, {i, 3 k, 6 k}]]
 				] }],
 				gl3 = 1.8 - gl3
 			], 
 			Inset[Text[Style["C", Black, Italic, 17], 
-				FormatType -> StandardForm], {0.8, -1.8}
+				FormatType -> StandardForm], {0.8, d - (-1.8)}
 			]
 		}];
 		aAndb = Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl4]],
 			Button[Polygon[{ Join[
-				Table[{Cos[Pi/(3 k) i] - 1/2, Sin[Pi/(3 k) i]}, {i, 0, k}],
-				Table[{Cos[Pi/(3 k) i] + 1/2, Sin[Pi/(3 k) i]}, {i, 2 k, 3 k}],
-				Reverse[ Table[{Cos[Pi/(3 k) i], Sin[Pi/(3 k) i] - Sqrt[3]/2}, {i, k, 2 k}]]
+				Table[{Cos[Pi/(3 k) i] - 1/2, d - Sin[Pi/(3 k) i]}, {i, 0, k}],
+				Table[{Cos[Pi/(3 k) i] + 1/2, d - Sin[Pi/(3 k) i]}, {i, 2 k, 3 k}],
+				Reverse[ Table[{Cos[Pi/(3 k) i], d - (Sin[Pi/(3 k) i] - Sqrt[3]/2)}, {i, k, 2 k}]]
 				] }],
 				gl4 = 1.8 - gl4
 			]
 		}];
 		aAndc = Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl5]],
 			Button[Polygon[{ Join[
-				Table[{Cos[Pi/(3 k) i] - 1/2, Sin[Pi/(3 k) i]}, {i, 4 k, 5 k}],
-				Reverse[ Table[{Cos[Pi/(3 k) i] + 1/2, Sin[Pi/(3 k) i]}, {i, 3 k, 4 k}]],
-				Table[{Cos[Pi/(3 k) i], Sin[Pi/(3 k) i] - Sqrt[3]/2}, {i, 2 k,3 k}]
+				Table[{Cos[Pi/(3 k) i] - 1/2, d - Sin[Pi/(3 k) i]}, {i, 4 k, 5 k}],
+				Reverse[ Table[{Cos[Pi/(3 k) i] + 1/2, d - Sin[Pi/(3 k) i]}, {i, 3 k, 4 k}]],
+				Table[{Cos[Pi/(3 k) i], d - (Sin[Pi/(3 k) i] - Sqrt[3]/2)}, {i, 2 k,3 k}]
 				] }], 
 				gl5 = 1.8 - gl5
 			]
 		}];
 		bAndc = Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl6]],
 			Button[Polygon[{ Join[
-				Table[{Cos[Pi/(3 k) i] - 1/2, Sin[Pi/(3 k) i]}, {i, 5 k, 6 k}],
-				Reverse[ Table[{Cos[Pi/(3 k) i], Sin[Pi/(3 k) i] - Sqrt[3]/2}, {i, 0, k}]],
-				Reverse[ Table[{Cos[Pi/(3 k) i] + 1/2, Sin[Pi/(3 k) i]}, {i, 4 k, 5 k}]]
+				Table[{Cos[Pi/(3 k) i] - 1/2, d - Sin[Pi/(3 k) i]}, {i, 5 k, 6 k}],
+				Reverse[ Table[{Cos[Pi/(3 k) i], d - (Sin[Pi/(3 k) i] - Sqrt[3]/2)}, {i, 0, k}]],
+				Reverse[ Table[{Cos[Pi/(3 k) i] + 1/2, d - Sin[Pi/(3 k) i]}, {i, 4 k, 5 k}]]
 				] }], 
 				gl6 = 1.8 - gl6
 			]
 		}];
 		allOfThem = Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl7]], 
 			Button[Polygon[{ Join[
-				Table[{Cos[Pi/(3 k) i] - 1/2, Sin[Pi/(3 k) i]}, {i, 5 k, 6 k}],
-				Table[{Cos[Pi/(3 k) i], Sin[Pi/(3 k) i] - Sqrt[3]/2}, {i, k, 2 k}],
-				Table[{Cos[Pi/(3 k) i] + 1/2, Sin[Pi/(3 k) i]}, {i, 3 k, 4 k}]
+				Table[{Cos[Pi/(3 k) i] - 1/2, d - Sin[Pi/(3 k) i]}, {i, 5 k, 6 k}],
+				Table[{Cos[Pi/(3 k) i], d - (Sin[Pi/(3 k) i] - Sqrt[3]/2)}, {i, k, 2 k}],
+				Table[{Cos[Pi/(3 k) i] + 1/2, d - Sin[Pi/(3 k) i]}, {i, 3 k, 4 k}]
 				] }],
 				gl7 = 1.8 - gl7
 			]
 		}];
-		noneOfThem = Graphics[{EdgeForm[Thickness[lineThickness]], Dynamic[GrayLevel[gl8]],
+		noneOfThem = Graphics[{EdgeForm[Thickness[1.3 lineThickness]], Dynamic[GrayLevel[gl8]],
 			Button[Polygon[{{-2, -2.3}, {2, -2.3}, {2, 1.5}, {-2, 1.5}, {-2, -2.3}}],
 				gl8 = 1.8 - gl8
 			],
 			Inset[ Text[
 					Style["U", Black, Italic, 17], 
 					FormatType -> StandardForm
-				], {2.2, 1.4}  
+				], {-2.2, 1.8}  
 			]
 		}];
 		seeExtra = Sequence[
