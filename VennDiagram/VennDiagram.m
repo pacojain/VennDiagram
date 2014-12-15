@@ -35,6 +35,7 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]:= Module[
 		showSetContents, showSetSizes,
 		listU, lineThickness= 0.006
 	},
+	Column[{
 	Manipulate[
 		expList = {exp21, exp22, exp23, exp24, exp25};
 		glList =  {gl21, gl22, gl23, gl24, gl25};
@@ -159,17 +160,13 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]:= Module[
 			]
 		];
 		Pane[
-			Column[{
-				Show[
-					noneOfThem, aOnly, bOnly, aAndb, If[ n25 != 0, Unevaluated[seeExtra], Unevaluated[Sequence[]] ],
-					If[showSetSizes,    Unevaluated[Sequence[setSizeA, setSizeB, setSizeU, setSizeAandB]], Unevaluated[Sequence[]] ],
-					If[showSetContents, Unevaluated[Sequence[setNameA, setNameB, setNameU]], Unevaluated[Sequence[]] ],
-					ImageSize -> {540, 300}
-				],
-				Short[expParts, 3]
-				}, Alignment -> Center
+			Show[
+				noneOfThem, aOnly, bOnly, aAndb, If[ n25 != 0, Unevaluated[seeExtra], Unevaluated[Sequence[]] ],
+				If[showSetSizes,    Unevaluated[Sequence[setSizeA, setSizeB, setSizeU, setSizeAandB]], Unevaluated[Sequence[]] ],
+				If[showSetContents, Unevaluated[Sequence[setNameA, setNameB, setNameU]], Unevaluated[Sequence[]] ],
+				ImageSize -> {540, 300}
 			], 
-			ImageSize -> {540, 500}
+			ImageSize -> {540, 300}
 		],
 
 		(* Define controls and initialization *)
@@ -185,10 +182,12 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]:= Module[
 			k = 12;
 			If[ listUin === "All" || listUin === All, listU= Union[listA, listB], listU= listUin]
 		)
-	]
+	],
+	Dynamic[expParts]
+	}]
 ]
 
-VennDiagram2[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]:= Module[
+VennDiagram[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]:= Module[
 	{
 		i, k, seeExtra, d=-0.67,
 		n1, n2, n3, n4, n5, n6, n7, n8, n9, 
@@ -202,6 +201,7 @@ VennDiagram2[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]
 		allOfThem, noneOfThem, showSetContents, showSetSizes,
 		listU, lineThickness= 0.006
 	},
+	Column[{
 	Manipulate[
 		expList = {exp1, exp2, exp3, exp4, exp5, exp6, exp7, exp8, exp9};
 		glList =  {gl1, gl2, gl3, gl4, gl5, gl6, gl7, gl8, gl9};
@@ -280,7 +280,7 @@ VennDiagram2[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]
 			]
 		}];
 		noneOfThem = Graphics[{EdgeForm[Thickness[1.3 lineThickness]], Dynamic[GrayLevel[gl8]],
-			Button[Polygon[{{-2.2, -3.2}, {2.2, -3.2}, {2.2, 1.5}, {-2.2, 1.5}, {-2.2, -3.2}}],
+			Button[Polygon[{{-2.2, -3.3}, {2.2, -3.3}, {2.2, 1.5}, {-2.2, 1.5}, {-2.2, -3.3}}],
 				gl8 = 1.8 - gl8
 			],
 			Inset[ Text[
@@ -292,14 +292,14 @@ VennDiagram2[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]
 		seeExtra = Sequence[
 			Graphics[ { If[ gl9 != 1, EdgeForm[Thickness[0.6 lineThickness]], Unevaluated[Sequence[]] ],
 				Dynamic[GrayLevel[gl9]],
-				Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {2.1, -2.3}}],
+				Polygon[{{2.3, -3.3}, {2.3, -2.9}, {2.7, -2.9}, {2.7, -3.3}, {2.3, -3.3}}],
 				Inset[
 					Text[Style[n9, Red, Bold, 14], FormatType -> StandardForm],
-					{2.3, -2.15} 
+					{2.5, -3.15} 
 				]
 			}],
 			Graphics[{Opacity[0],
-				Button[Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {2.1, -2.3}}],
+				Button[Polygon[{{2.3, -3.3}, {2.3, -2.9}, {2.7, -2.9}, {2.7, -3.3}, {2.3, -3.3}}],
 					gl9 = 1.8 - gl9
 				]
 			}]
@@ -310,8 +310,8 @@ VennDiagram2[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]
 		exp2= Complement[listB, Union[listC, listA]];
 		exp3= Complement[listC, Union[listA, listB]];
 		exp4= Complement[Intersection[listA, listB], listC];
-		exp5= Complement[Intersection[listB, listC], listA];
-		exp6= Complement[Intersection[listC, listA], listB];
+		exp5= Complement[Intersection[listA, listC], listB];
+		exp6= Complement[Intersection[listB, listC], listA];
 		exp7= Intersection[ listA, listB, listC ];
 		exp8= Complement[ listU, Union[ listA, listB, listC ] ];
 		exp9= Complement[ Union[listA, listB, listC], listU ];
@@ -337,7 +337,7 @@ VennDiagram2[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]
 		setSizeC= Graphics[ 
 			Inset[
 				Text[
-					Style[n2, Black, Bold, 14], 
+					Style[n3, Black, Bold, 14], 
 					FormatType -> StandardForm
 				],
 				{0.0, 0.9}
@@ -352,22 +352,22 @@ VennDiagram2[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]
 				{0.0, -1.2}
 			]
 		];
-		setSizeBandC= Graphics[ 
+		setSizeAandC= Graphics[ 
 			Inset[
 				Text[
 					Style[n5, Black, Bold, 14], 
 					FormatType -> StandardForm
 				],
-				{0.69, 0.02}
+				{-0.69, 0.02}
 			]
 		];
-		setSizeAandC= Graphics[ 
+		setSizeBandC= Graphics[ 
 			Inset[
 				Text[
 					Style[n6, Black, Bold, 14], 
 					FormatType -> StandardForm
 				],
-				{-0.69, 0.02}
+				{0.69, 0.02}
 			]
 		];
 		setSizeABC= Graphics[ 
@@ -400,34 +400,30 @@ VennDiagram2[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]
 		setNameA= Graphics[
 			Inset[
 				Text[Style["A = ", Black, 17, Italic]],
-				{-1.6, -2.0}
+				{-1.6, -2.1}
 			]
 		];
 		setNameB= Graphics[
 			Inset[
 				Text[Style["B = ", Black, 17, Italic]],
-				{-1.6, -2.5}
+				{-1.6, -2.6}
 			]
 		];
 		setNameC= Graphics[
 			Inset[
 				Text[Style["C = ", Black, 17, Italic]],
-				{-1.6, -3.0}
+				{-1.6, -3.1}
 			]
 		];
 		Pane[
-			Column[{
-				Show[
-					noneOfThem, aOnly, bOnly, cOnly, aAndb, bAndc, aAndc, allOfThem,
-					If[ n9 != 0, Unevaluated[seeExtra], Unevaluated[Sequence[]] ],
-					If[showSetSizes,    Unevaluated[Sequence[setSizeA, setSizeB, setSizeC, setSizeU, setSizeAandB, setSizeBandC, setSizeAandC, setSizeABC]], Unevaluated[Sequence[]] ],
-					If[showSetContents, Unevaluated[Sequence[setNameA, setNameB, setNameC, setNameU]], Unevaluated[Sequence[]] ],
-					ImageSize -> {540, 300}
-				],
-				Short[expParts, 3]
-				}, Alignment -> Center
-			], 
-			ImageSize -> {540, 500}
+			Show[
+				noneOfThem, aOnly, bOnly, cOnly, aAndb, bAndc, aAndc, allOfThem,
+				If[ n9 != 0, Unevaluated[seeExtra], Unevaluated[Sequence[]] ],
+				If[showSetSizes,    Unevaluated[Sequence[setSizeA, setSizeB, setSizeC, setSizeU, setSizeAandB, setSizeBandC, setSizeAandC, setSizeABC]], Unevaluated[Sequence[]] ],
+				If[showSetContents, Unevaluated[Sequence[setNameA, setNameB, setNameC, setNameU]], Unevaluated[Sequence[]] ],
+				ImageSize -> {540, 300}
+			],
+			ImageSize -> {540, 300}
 		],
 		{{gl1, 1}, ControlType -> None},
 		{{gl2, 1}, ControlType -> None},
@@ -445,7 +441,9 @@ VennDiagram2[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]
 			k = 12;
 			If[ listUin === "All" || listUin === All, listU= Union[listA, listB, listC], listU= listUin]
 		)
-	]
+	],
+	Dynamic[expParts]
+	}]
 ]
 
 End[]

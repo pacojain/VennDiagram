@@ -10,915 +10,1574 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     44676,        942]
-NotebookOptionsPosition[     44113,        922]
-NotebookOutlinePosition[     44663,        940]
-CellTagsIndexPosition[     44620,        937]
+NotebookDataLength[     81636,       1623]
+NotebookOptionsPosition[     80382,       1581]
+NotebookOutlinePosition[     80932,       1599]
+CellTagsIndexPosition[     80889,       1596]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "\"\<VennDiagram`\>\""}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.62760761765812*^9, 3.6276076304581375`*^9}}],
 
 Cell[CellGroupData[{
+
 Cell[BoxData[{
- RowBox[{"<<", "VennDiagram`"}], "\[IndentingNewLine]", 
- RowBox[{"Row", "[", " ", 
+ RowBox[{"VennDiagram", "[", 
   RowBox[{
-   RowBox[{"VennDiagram2", "[", 
+   RowBox[{"Table", "[", 
+    RowBox[{"i", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "300"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Table", "[", 
     RowBox[{
+     RowBox[{"Prime", "[", "i", "]"}], ",", 
      RowBox[{"{", 
-      RowBox[{"1", ",", "4", ",", "3"}], "}"}], ",", 
+      RowBox[{"i", ",", "1", ",", "100"}], "}"}]}], "]"}], ",", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{"i", ",", 
      RowBox[{"{", 
-      RowBox[{"5", ",", "4", ",", "6"}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"7", ",", "8"}], "}"}], ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "]"}], ",", " ", 
-   RowBox[{"VennDiagram", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"1", ",", "4", ",", "3"}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"5", ",", "4", ",", "6"}], "}"}], ",", " ", "\"\<All\>\""}], 
-    "]"}]}], " ", "]"}]}], "Input",
- CellChangeTimes->{{3.6258625432200456`*^9, 3.6258625637411776`*^9}, {
-   3.6259248287153606`*^9, 3.625924829464156*^9}, {3.6259259931104794`*^9, 
-   3.6259259933600793`*^9}, {3.6259284149764833`*^9, 
-   3.6259284175660834`*^9}, {3.62593311745147*^9, 3.62593316268487*^9}, {
-   3.62593319350187*^9, 3.62593321398567*^9}, {3.6259347184860697`*^9, 
-   3.62593472152807*^9}, 3.62593513147687*^9, {3.6260396507206926`*^9, 
-   3.6260396893619604`*^9}, {3.626192506331379*^9, 3.6261925342242284`*^9}, {
-   3.626192567015486*^9, 3.6261925919599295`*^9}, {3.626192833417154*^9, 
-   3.6261928586735983`*^9}, {3.6261968863571634`*^9, 
-   3.6261968905535707`*^9}, {3.626197210588133*^9, 3.626197234346975*^9}, {
-   3.6264389116876526`*^9, 3.626438915161056*^9}}],
+      RowBox[{"i", ",", "3", ",", "400"}], "}"}]}], "]"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"list", "=", 
+   RowBox[{"%", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.62760761765812*^9, 3.6276076304581375`*^9}, {
+  3.627607745078298*^9, 3.6276077543883114`*^9}}],
 
 Cell[BoxData[
- RowBox[{"Row", "[", 
-  RowBox[{
-   TagBox[
-    StyleBox[
-     DynamicModuleBox[{VennDiagram`Private`gl1$75059$$ = 1, 
-      VennDiagram`Private`gl2$75059$$ = 1, VennDiagram`Private`gl3$75059$$ = 
-      1, VennDiagram`Private`gl4$75059$$ = 1, 
-      VennDiagram`Private`gl5$75059$$ = 1, VennDiagram`Private`gl6$75059$$ = 
-      1, VennDiagram`Private`gl7$75059$$ = 1, 
-      VennDiagram`Private`gl8$75059$$ = 1, VennDiagram`Private`gl9$75059$$ = 
-      1, VennDiagram`Private`showSetContents$75059$$ = True, 
-      VennDiagram`Private`showSetSizes$75059$$ = True, Typeset`show$$ = True, 
-      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-      "\"untitled\"", Typeset`specs$$ = {{{
-         Hold[VennDiagram`Private`gl1$75059$$], 1}}, {{
-         Hold[VennDiagram`Private`gl2$75059$$], 1}}, {{
-         Hold[VennDiagram`Private`gl3$75059$$], 1}}, {{
-         Hold[VennDiagram`Private`gl4$75059$$], 1}}, {{
-         Hold[VennDiagram`Private`gl5$75059$$], 1}}, {{
-         Hold[VennDiagram`Private`gl6$75059$$], 1}}, {{
-         Hold[VennDiagram`Private`gl7$75059$$], 1}}, {{
-         Hold[VennDiagram`Private`gl8$75059$$], 1}}, {{
-         Hold[VennDiagram`Private`gl9$75059$$], 1}}, {{
-         Hold[VennDiagram`Private`showSetSizes$75059$$], True, 
-         "show set sizes"}, {True, False}}, {{
-         Hold[VennDiagram`Private`showSetContents$75059$$], True, 
-         "show set contents"}, {True, False}}}, Typeset`size$$ = {
-      540., {246., 254.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-      Typeset`skipInitDone$$ = False, 
-      VennDiagram`Private`showSetSizes$75059$75061$$ = False, 
-      VennDiagram`Private`showSetContents$75059$75062$$ = False}, 
-      DynamicBox[Manipulate`ManipulateBoxes[
-       1, StandardForm, 
-        "Variables" :> {
-         VennDiagram`Private`gl1$75059$$ = 1, VennDiagram`Private`gl2$75059$$ = 
-          1, VennDiagram`Private`gl3$75059$$ = 1, 
-          VennDiagram`Private`gl4$75059$$ = 1, 
-          VennDiagram`Private`gl5$75059$$ = 1, 
-          VennDiagram`Private`gl6$75059$$ = 1, 
-          VennDiagram`Private`gl7$75059$$ = 1, 
-          VennDiagram`Private`gl8$75059$$ = 1, 
-          VennDiagram`Private`gl9$75059$$ = 1, 
-          VennDiagram`Private`showSetContents$75059$$ = True, 
-          VennDiagram`Private`showSetSizes$75059$$ = True}, 
-        "ControllerVariables" :> {
-          Hold[
-          VennDiagram`Private`showSetSizes$75059$$, 
-           VennDiagram`Private`showSetSizes$75059$75061$$, False], 
-          Hold[
-          VennDiagram`Private`showSetContents$75059$$, 
-           VennDiagram`Private`showSetContents$75059$75062$$, False]}, 
-        "OtherVariables" :> {
-         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
-          Typeset`initDone$$, Typeset`skipInitDone$$}, 
-        "Body" :> (
-         VennDiagram`Private`expList$75059 = {
-           VennDiagram`Private`exp1$75059, VennDiagram`Private`exp2$75059, 
-            VennDiagram`Private`exp3$75059, VennDiagram`Private`exp4$75059, 
-            VennDiagram`Private`exp5$75059, VennDiagram`Private`exp6$75059, 
-            VennDiagram`Private`exp7$75059, VennDiagram`Private`exp8$75059, 
-            VennDiagram`Private`exp9$75059}; 
-         VennDiagram`Private`glList$75059 = {
-           VennDiagram`Private`gl1$75059$$, VennDiagram`Private`gl2$75059$$, 
-            VennDiagram`Private`gl3$75059$$, VennDiagram`Private`gl4$75059$$, 
-            VennDiagram`Private`gl5$75059$$, VennDiagram`Private`gl6$75059$$, 
-            VennDiagram`Private`gl7$75059$$, VennDiagram`Private`gl8$75059$$, 
-            VennDiagram`Private`gl9$75059$$}; 
-         VennDiagram`Private`expParts$75059 = Apply[Union, 
-            Pick[
-            VennDiagram`Private`expList$75059, 
-             VennDiagram`Private`glList$75059, 0.8]]; 
-         VennDiagram`Private`aOnly$75059 = Graphics[{
-             EdgeForm[
-              Thickness[VennDiagram`Private`lineThickness$75059]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl1$75059$$]], 
-             Button[
-              Polygon[{
-                Join[
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - 1/2, 
-                   VennDiagram`Private`d$75059 - Sin[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                  VennDiagram`Private`i$75059, VennDiagram`Private`k$75059, 4 
-                   VennDiagram`Private`k$75059}], 
-                 Reverse[
-                  Table[{
-                    Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059], 
-                    VennDiagram`Private`d$75059 - (
-                    Sin[Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - Sqrt[3]/2)}, {
-                   VennDiagram`Private`i$75059, 2 VennDiagram`Private`k$75059,
-                     3 VennDiagram`Private`k$75059}]], 
-                 Reverse[
-                  
-                  Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] + 1/2, 
-                    VennDiagram`Private`d$75059 - Sin[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                   VennDiagram`Private`i$75059, 2 VennDiagram`Private`k$75059,
-                     3 VennDiagram`Private`k$75059}]]]}], 
-              VennDiagram`Private`gl1$75059$$ = 
-              1.8 - VennDiagram`Private`gl1$75059$$], 
-             Inset[
-              Text[
-               Style["A", Black, Italic, 17], FormatType -> 
-               StandardForm], {-1.4, VennDiagram`Private`d$75059 - 0.8}]}]; 
-         VennDiagram`Private`bOnly$75059 = Graphics[{
-             EdgeForm[
-              Thickness[VennDiagram`Private`lineThickness$75059]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl2$75059$$]], 
-             Button[
-              Polygon[{
-                Join[
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - 1/2, 
-                   VennDiagram`Private`d$75059 - Sin[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                  VennDiagram`Private`i$75059, 0, 
-                   VennDiagram`Private`k$75059}], 
-                 Reverse[
-                  
-                  Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] + 1/2, 
-                    VennDiagram`Private`d$75059 - Sin[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                   VennDiagram`Private`i$75059, -VennDiagram`Private`k$75059, 
-                    2 VennDiagram`Private`k$75059}]], 
-                 Table[{
-                   Cos[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059], 
-                   VennDiagram`Private`d$75059 - (
-                   Sin[Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - Sqrt[3]/2)}, {
-                  VennDiagram`Private`i$75059, 0, 
-                   VennDiagram`Private`k$75059}]]}], 
-              VennDiagram`Private`gl2$75059$$ = 
-              1.8 - VennDiagram`Private`gl2$75059$$], 
-             Inset[
-              Text[
-               Style["B", Black, Italic, 17], FormatType -> StandardForm], {
-              1.4, VennDiagram`Private`d$75059 - 0.8}]}]; 
-         VennDiagram`Private`cOnly$75059 = Graphics[{
-             EdgeForm[
-              Thickness[VennDiagram`Private`lineThickness$75059]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl3$75059$$]], 
-             Button[
-              Polygon[{
-                Join[
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - 1/2, 
-                   VennDiagram`Private`d$75059 - Sin[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                  VennDiagram`Private`i$75059, 4 VennDiagram`Private`k$75059, 
-                   5 VennDiagram`Private`k$75059}], 
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] + 1/2, 
-                   VennDiagram`Private`d$75059 - Sin[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                  VennDiagram`Private`i$75059, 4 VennDiagram`Private`k$75059, 
-                   5 VennDiagram`Private`k$75059}], 
-                 Reverse[
-                  Table[{
-                    Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059], 
-                    VennDiagram`Private`d$75059 - (
-                    Sin[Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - Sqrt[3]/2)}, {
-                   VennDiagram`Private`i$75059, 3 VennDiagram`Private`k$75059,
-                     6 VennDiagram`Private`k$75059}]]]}], 
-              VennDiagram`Private`gl3$75059$$ = 
-              1.8 - VennDiagram`Private`gl3$75059$$], 
-             Inset[
-              Text[
-               Style["C", Black, Italic, 17], FormatType -> StandardForm], {
-              0.8, VennDiagram`Private`d$75059 - -1.8}]}]; 
-         VennDiagram`Private`aAndb$75059 = Graphics[{
-             EdgeForm[
-              Thickness[VennDiagram`Private`lineThickness$75059]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl4$75059$$]], 
-             Button[
-              Polygon[{
-                Join[
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - 1/2, 
-                   VennDiagram`Private`d$75059 - Sin[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                  VennDiagram`Private`i$75059, 0, 
-                   VennDiagram`Private`k$75059}], 
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] + 1/2, 
-                   VennDiagram`Private`d$75059 - Sin[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                  VennDiagram`Private`i$75059, 2 VennDiagram`Private`k$75059, 
-                   3 VennDiagram`Private`k$75059}], 
-                 Reverse[
-                  Table[{
-                    Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059], 
-                    VennDiagram`Private`d$75059 - (
-                    Sin[Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - Sqrt[3]/2)}, {
-                   VennDiagram`Private`i$75059, VennDiagram`Private`k$75059, 
-                    2 VennDiagram`Private`k$75059}]]]}], 
-              VennDiagram`Private`gl4$75059$$ = 
-              1.8 - VennDiagram`Private`gl4$75059$$]}]; 
-         VennDiagram`Private`aAndc$75059 = Graphics[{
-             EdgeForm[
-              Thickness[VennDiagram`Private`lineThickness$75059]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl5$75059$$]], 
-             Button[
-              Polygon[{
-                Join[
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - 1/2, 
-                   VennDiagram`Private`d$75059 - Sin[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                  VennDiagram`Private`i$75059, 4 VennDiagram`Private`k$75059, 
-                   5 VennDiagram`Private`k$75059}], 
-                 Reverse[
-                  
-                  Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] + 1/2, 
-                    VennDiagram`Private`d$75059 - Sin[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                   VennDiagram`Private`i$75059, 3 VennDiagram`Private`k$75059,
-                     4 VennDiagram`Private`k$75059}]], 
-                 Table[{
-                   Cos[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059], 
-                   VennDiagram`Private`d$75059 - (
-                   Sin[Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - Sqrt[3]/2)}, {
-                  VennDiagram`Private`i$75059, 2 VennDiagram`Private`k$75059, 
-                   3 VennDiagram`Private`k$75059}]]}], 
-              VennDiagram`Private`gl5$75059$$ = 
-              1.8 - VennDiagram`Private`gl5$75059$$]}]; 
-         VennDiagram`Private`bAndc$75059 = Graphics[{
-             EdgeForm[
-              Thickness[VennDiagram`Private`lineThickness$75059]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl6$75059$$]], 
-             Button[
-              Polygon[{
-                Join[
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - 1/2, 
-                   VennDiagram`Private`d$75059 - Sin[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                  VennDiagram`Private`i$75059, 5 VennDiagram`Private`k$75059, 
-                   6 VennDiagram`Private`k$75059}], 
-                 Reverse[
-                  Table[{
-                    Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059], 
-                    VennDiagram`Private`d$75059 - (
-                    Sin[Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - Sqrt[3]/2)}, {
-                   VennDiagram`Private`i$75059, 0, 
-                    VennDiagram`Private`k$75059}]], 
-                 Reverse[
-                  
-                  Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] + 1/2, 
-                    VennDiagram`Private`d$75059 - Sin[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                   VennDiagram`Private`i$75059, 4 VennDiagram`Private`k$75059,
-                     5 VennDiagram`Private`k$75059}]]]}], 
-              VennDiagram`Private`gl6$75059$$ = 
-              1.8 - VennDiagram`Private`gl6$75059$$]}]; 
-         VennDiagram`Private`allOfThem$75059 = Graphics[{
-             EdgeForm[
-              Thickness[VennDiagram`Private`lineThickness$75059]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl7$75059$$]], 
-             Button[
-              Polygon[{
-                Join[
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - 1/2, 
-                   VennDiagram`Private`d$75059 - Sin[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                  VennDiagram`Private`i$75059, 5 VennDiagram`Private`k$75059, 
-                   6 VennDiagram`Private`k$75059}], 
-                 Table[{
-                   Cos[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059], 
-                   VennDiagram`Private`d$75059 - (
-                   Sin[Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] - Sqrt[3]/2)}, {
-                  VennDiagram`Private`i$75059, VennDiagram`Private`k$75059, 2 
-                   VennDiagram`Private`k$75059}], 
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059] + 1/2, 
-                   VennDiagram`Private`d$75059 - Sin[
-                   Pi (3 VennDiagram`Private`k$75059)^(-1) 
-                    VennDiagram`Private`i$75059]}, {
-                  VennDiagram`Private`i$75059, 3 VennDiagram`Private`k$75059, 
-                   4 VennDiagram`Private`k$75059}]]}], 
-              VennDiagram`Private`gl7$75059$$ = 
-              1.8 - VennDiagram`Private`gl7$75059$$]}]; 
-         VennDiagram`Private`noneOfThem$75059 = Graphics[{
-             EdgeForm[
-              Thickness[1.3 VennDiagram`Private`lineThickness$75059]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl8$75059$$]], 
-             Button[
-              
-              Polygon[{{-2.2, -3.2}, {2.2, -3.2}, {2.2, 1.5}, {-2.2, 
-               1.5}, {-2.2, -3.2}}], VennDiagram`Private`gl8$75059$$ = 
-              1.8 - VennDiagram`Private`gl8$75059$$], 
-             Inset[
-              Text[
-               Style["U", Black, Italic, 17], FormatType -> 
-               StandardForm], {-2.2, 1.8}]}]; 
-         VennDiagram`Private`seeExtra$75059 = Sequence[
-            Graphics[{
-              If[VennDiagram`Private`gl9$75059$$ != 1, 
+ TagBox[GridBox[{
+    {
+     TagBox[
+      StyleBox[
+       DynamicModuleBox[{VennDiagram`Private`gl21$352095$$ = 1., 
+        VennDiagram`Private`gl22$352095$$ = 1., 
+        VennDiagram`Private`gl23$352095$$ = 1., 
+        VennDiagram`Private`gl24$352095$$ = 0.8, 
+        VennDiagram`Private`gl25$352095$$ = 1., 
+        VennDiagram`Private`showSetContents$352095$$ = True, 
+        VennDiagram`Private`showSetSizes$352095$$ = True, Typeset`show$$ = 
+        True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+        Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+        "\"untitled\"", Typeset`specs$$ = {{{
+           Hold[VennDiagram`Private`gl21$352095$$], 1}}, {{
+           Hold[VennDiagram`Private`gl22$352095$$], 1}}, {{
+           Hold[VennDiagram`Private`gl23$352095$$], 1}}, {{
+           Hold[VennDiagram`Private`gl24$352095$$], 1}}, {{
+           Hold[VennDiagram`Private`gl25$352095$$], 1}}, {{
+           Hold[VennDiagram`Private`showSetSizes$352095$$], True, 
+           "show set sizes"}, {True, False}}, {{
+           Hold[VennDiagram`Private`showSetContents$352095$$], True, 
+           "show set contents"}, {True, False}}}, Typeset`size$$ = {
+        540., {146., 154.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        Typeset`skipInitDone$$ = False, 
+        VennDiagram`Private`showSetSizes$352095$352096$$ = False, 
+        VennDiagram`Private`showSetContents$352095$352097$$ = False}, 
+        DynamicBox[Manipulate`ManipulateBoxes[
+         1, StandardForm, 
+          "Variables" :> {
+           VennDiagram`Private`gl21$352095$$ = 1, 
+            VennDiagram`Private`gl22$352095$$ = 1, 
+            VennDiagram`Private`gl23$352095$$ = 1, 
+            VennDiagram`Private`gl24$352095$$ = 1, 
+            VennDiagram`Private`gl25$352095$$ = 1, 
+            VennDiagram`Private`showSetContents$352095$$ = True, 
+            VennDiagram`Private`showSetSizes$352095$$ = True}, 
+          "ControllerVariables" :> {
+            Hold[
+            VennDiagram`Private`showSetSizes$352095$$, 
+             VennDiagram`Private`showSetSizes$352095$352096$$, False], 
+            Hold[
+            VennDiagram`Private`showSetContents$352095$$, 
+             VennDiagram`Private`showSetContents$352095$352097$$, False]}, 
+          "OtherVariables" :> {
+           Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+            Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+            Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+            Typeset`initDone$$, Typeset`skipInitDone$$}, 
+          "Body" :> (
+           VennDiagram`Private`expList$352095 = {
+             VennDiagram`Private`exp21$352095, 
+              VennDiagram`Private`exp22$352095, 
+              VennDiagram`Private`exp23$352095, 
+              VennDiagram`Private`exp24$352095, 
+              VennDiagram`Private`exp25$352095}; 
+           VennDiagram`Private`glList$352095 = {
+             VennDiagram`Private`gl21$352095$$, 
+              VennDiagram`Private`gl22$352095$$, 
+              VennDiagram`Private`gl23$352095$$, 
+              VennDiagram`Private`gl24$352095$$, 
+              VennDiagram`Private`gl25$352095$$}; 
+           VennDiagram`Private`expParts$352095 = Apply[Union, 
+              Pick[
+              VennDiagram`Private`expList$352095, 
+               VennDiagram`Private`glList$352095, 0.8]]; 
+           VennDiagram`Private`aOnly$352095 = Graphics[{
                EdgeForm[
-                Thickness[0.6 VennDiagram`Private`lineThickness$75059]], 
-               Unevaluated[
-                Sequence[]]], 
-              Dynamic[
-               GrayLevel[VennDiagram`Private`gl9$75059$$]], 
-              
-              Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {
-               2.1, -2.3}}], 
+                Thickness[VennDiagram`Private`lineThickness$352095]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl21$352095$$]], 
+               Button[
+                Polygon[{
+                  Join[
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095] - 1/2, 
+                    Sin[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095]}, {
+                    VennDiagram`Private`i$352095, 
+                    VennDiagram`Private`k$352095, 5 
+                    VennDiagram`Private`k$352095}], 
+                   Reverse[
+                    
+                    Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095] + 1/2, 
+                    Sin[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095]}, {
+                    VennDiagram`Private`i$352095, 2 
+                    VennDiagram`Private`k$352095, 4 
+                    VennDiagram`Private`k$352095}]]]}], 
+                VennDiagram`Private`gl21$352095$$ = 
+                1.8 - VennDiagram`Private`gl21$352095$$], 
+               Inset[
+                Text[
+                 Style["A", Black, Italic, 17], FormatType -> 
+                 StandardForm], {-1.4, 0.8}]}]; 
+           VennDiagram`Private`bOnly$352095 = Graphics[{
+               EdgeForm[
+                Thickness[VennDiagram`Private`lineThickness$352095]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl22$352095$$]], 
+               Button[
+                Polygon[{
+                  Join[
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095] - 1/2, 
+                    Sin[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095]}, {
+                    VennDiagram`Private`i$352095, -
+                    VennDiagram`Private`k$352095, 
+                    VennDiagram`Private`k$352095}], 
+                   Reverse[
+                    
+                    Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095] + 1/2, 
+                    Sin[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095]}, {
+                    VennDiagram`Private`i$352095, (-2) 
+                    VennDiagram`Private`k$352095, 2 
+                    VennDiagram`Private`k$352095}]]]}], 
+                VennDiagram`Private`gl22$352095$$ = 
+                1.8 - VennDiagram`Private`gl22$352095$$], 
+               Inset[
+                Text[
+                 Style["B", Black, Italic, 17], FormatType -> StandardForm], {
+                1.4, 0.8}]}]; VennDiagram`Private`aAndb$352095 = Graphics[{
+               EdgeForm[
+                Thickness[VennDiagram`Private`lineThickness$352095]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl23$352095$$]], 
+               Button[
+                Polygon[{
+                  Join[
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095] - 1/2, 
+                    Sin[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095]}, {
+                    VennDiagram`Private`i$352095, -
+                    VennDiagram`Private`k$352095, 
+                    VennDiagram`Private`k$352095}], 
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095] + 1/2, 
+                    Sin[
+                    Pi (3 VennDiagram`Private`k$352095)^(-1) 
+                    VennDiagram`Private`i$352095]}, {
+                    VennDiagram`Private`i$352095, 2 
+                    VennDiagram`Private`k$352095, 4 
+                    VennDiagram`Private`k$352095}]]}], 
+                VennDiagram`Private`gl23$352095$$ = 
+                1.8 - VennDiagram`Private`gl23$352095$$]}]; 
+           VennDiagram`Private`noneOfThem$352095 = Graphics[{
+               EdgeForm[
+                Thickness[1.3 VennDiagram`Private`lineThickness$352095]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl24$352095$$]], 
+               Button[
+                
+                Polygon[{{-2, -2.3}, {2, -2.3}, {
+                  2, 1.5}, {-2, 1.5}, {-2, -2.3}}], 
+                VennDiagram`Private`gl24$352095$$ = 
+                1.8 - VennDiagram`Private`gl24$352095$$], 
+               Inset[
+                Text[
+                 Style["U", Black, Italic, 17], FormatType -> 
+                 StandardForm], {-2.2, 1.8}]}]; 
+           VennDiagram`Private`seeExtra$352095 = Sequence[
+              Graphics[{
+                If[VennDiagram`Private`gl25$352095$$ != 1, 
+                 EdgeForm[
+                  Thickness[0.6 VennDiagram`Private`lineThickness$352095]], 
+                 Unevaluated[
+                  Sequence[]]], 
+                Dynamic[
+                 GrayLevel[VennDiagram`Private`gl25$352095$$]], 
+                
+                Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {
+                 2.1, -2.3}}], 
+                Inset[
+                 Text[
+                  Style[VennDiagram`Private`n25$352095, Red, Bold, 14], 
+                  FormatType -> StandardForm], {2.3, -2.15}]}], 
+              Graphics[{
+                Opacity[0], 
+                Button[
+                 
+                 Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, 
+                  {2.1, -2.3}}], VennDiagram`Private`gl25$352095$$ = 
+                 1.8 - VennDiagram`Private`gl25$352095$$]}]]; 
+           VennDiagram`Private`exp21$352095 = Complement[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+              "], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+              "]]; 
+           VennDiagram`Private`exp22$352095 = Complement[CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+              "], CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+              "]]; 
+           VennDiagram`Private`exp23$352095 = Intersection[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+              "], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+              "]]; 
+           VennDiagram`Private`exp24$352095 = 
+            Complement[VennDiagram`Private`listU$352095, 
+              Union[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+               "], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+               "]]]; VennDiagram`Private`exp25$352095 = Complement[
+              Union[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+               "], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+               "]], VennDiagram`Private`listU$352095]; {
+             VennDiagram`Private`n21$352095, VennDiagram`Private`n22$352095, 
+              VennDiagram`Private`n23$352095, VennDiagram`Private`n24$352095, 
+              VennDiagram`Private`n25$352095} = 
+            Map[Length, {
+              VennDiagram`Private`exp21$352095, 
+               VennDiagram`Private`exp22$352095, 
+               VennDiagram`Private`exp23$352095, 
+               VennDiagram`Private`exp24$352095, 
+               VennDiagram`Private`exp25$352095}]; 
+           VennDiagram`Private`setSizeA$352095 = Graphics[
               Inset[
                Text[
-                Style[VennDiagram`Private`n9$75059, Red, Bold, 14], 
-                FormatType -> StandardForm], {2.3, -2.15}]}], 
-            Graphics[{
-              Opacity[0], 
-              Button[
-               
-               Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {
-                2.1, -2.3}}], VennDiagram`Private`gl9$75059$$ = 
-               1.8 - VennDiagram`Private`gl9$75059$$]}]]; 
-         VennDiagram`Private`exp1$75059 = Complement[{1, 4, 3}, 
-            Union[{5, 4, 6}, {7, 8}]]; 
-         VennDiagram`Private`exp2$75059 = Complement[{5, 4, 6}, 
-            Union[{7, 8}, {1, 4, 3}]]; 
-         VennDiagram`Private`exp3$75059 = Complement[{7, 8}, 
-            Union[{1, 4, 3}, {5, 4, 6}]]; 
-         VennDiagram`Private`exp4$75059 = Complement[
-            Intersection[{1, 4, 3}, {5, 4, 6}], {7, 8}]; 
-         VennDiagram`Private`exp5$75059 = Complement[
-            Intersection[{5, 4, 6}, {7, 8}], {1, 4, 3}]; 
-         VennDiagram`Private`exp6$75059 = Complement[
-            Intersection[{7, 8}, {1, 4, 3}], {5, 4, 6}]; 
-         VennDiagram`Private`exp7$75059 = 
-          Intersection[{1, 4, 3}, {5, 4, 6}, {7, 8}]; 
-         VennDiagram`Private`exp8$75059 = 
-          Complement[VennDiagram`Private`listU$75059, 
-            Union[{1, 4, 3}, {5, 4, 6}, {7, 8}]]; 
-         VennDiagram`Private`exp9$75059 = Complement[
-            Union[{1, 4, 3}, {5, 4, 6}, {7, 8}], 
-            VennDiagram`Private`listU$75059]; {
-           VennDiagram`Private`n1$75059, VennDiagram`Private`n2$75059, 
-            VennDiagram`Private`n3$75059, VennDiagram`Private`n4$75059, 
-            VennDiagram`Private`n5$75059, VennDiagram`Private`n6$75059, 
-            VennDiagram`Private`n7$75059, VennDiagram`Private`n8$75059, 
-            VennDiagram`Private`n9$75059} = 
-          Map[Length, {
-            VennDiagram`Private`exp1$75059, VennDiagram`Private`exp2$75059, 
-             VennDiagram`Private`exp3$75059, VennDiagram`Private`exp4$75059, 
-             VennDiagram`Private`exp5$75059, VennDiagram`Private`exp6$75059, 
-             VennDiagram`Private`exp7$75059, VennDiagram`Private`exp8$75059, 
-             VennDiagram`Private`exp9$75059}]; 
-         VennDiagram`Private`setSizeA$75059 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n1$75059, Black, Bold, 14], 
-              FormatType -> StandardForm], {-1.2, -0.7}]]; 
-         VennDiagram`Private`setSizeB$75059 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n2$75059, Black, Bold, 14], 
-              FormatType -> StandardForm], {1.2, -0.7}]]; 
-         VennDiagram`Private`setSizeC$75059 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n2$75059, Black, Bold, 14], 
-              FormatType -> StandardForm], {0., 0.9}]]; 
-         VennDiagram`Private`setSizeAandB$75059 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n4$75059, Black, Bold, 14], 
-              FormatType -> StandardForm], {0., -1.2}]]; 
-         VennDiagram`Private`setSizeBandC$75059 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n5$75059, Black, Bold, 14], 
-              FormatType -> StandardForm], {0.69, 0.02}]]; 
-         VennDiagram`Private`setSizeAandC$75059 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n6$75059, Black, Bold, 14], 
-              FormatType -> StandardForm], {-0.69, 0.02}]]; 
-         VennDiagram`Private`setSizeABC$75059 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n7$75059, Black, Bold, 14], 
-              FormatType -> StandardForm], {0., -0.38}]]; 
-         VennDiagram`Private`setSizeU$75059 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n8$75059, Black, Bold, 14], 
-              FormatType -> StandardForm], {-1.6, 1.2}]]; 
-         VennDiagram`Private`setNameU$75059 = Graphics[
-            Inset[
-             Text[
-              Style[" = ", Black, 17], FormatType -> StandardForm], {-1.8, 
-             1.8}]]; VennDiagram`Private`setNameA$75059 = Graphics[
-            Inset[
-             Text[
-              Style["A = ", Black, 17, Italic]], {-1.6, -2.}]]; 
-         VennDiagram`Private`setNameB$75059 = Graphics[
-            Inset[
-             Text[
-              Style["B = ", Black, 17, Italic]], {-1.6, -2.5}]]; 
-         VennDiagram`Private`setNameC$75059 = Graphics[
-            Inset[
-             Text[
-              Style["C = ", Black, 17, Italic]], {-1.6, -3.}]]; Pane[
-           Column[{
-             Show[
-             VennDiagram`Private`noneOfThem$75059, 
-              VennDiagram`Private`aOnly$75059, 
-              VennDiagram`Private`bOnly$75059, 
-              VennDiagram`Private`cOnly$75059, 
-              VennDiagram`Private`aAndb$75059, 
-              VennDiagram`Private`bAndc$75059, 
-              VennDiagram`Private`aAndc$75059, 
-              VennDiagram`Private`allOfThem$75059, 
-              If[VennDiagram`Private`n9$75059 != 0, 
-               Unevaluated[VennDiagram`Private`seeExtra$75059], 
-               Unevaluated[
-                Sequence[]]], 
-              If[VennDiagram`Private`showSetSizes$75059$$, 
-               Unevaluated[
-                Sequence[
-                VennDiagram`Private`setSizeA$75059, 
-                 VennDiagram`Private`setSizeB$75059, 
-                 VennDiagram`Private`setSizeC$75059, 
-                 VennDiagram`Private`setSizeU$75059, 
-                 VennDiagram`Private`setSizeAandB$75059, 
-                 VennDiagram`Private`setSizeBandC$75059, 
-                 VennDiagram`Private`setSizeAandC$75059, 
-                 VennDiagram`Private`setSizeABC$75059]], 
-               Unevaluated[
-                Sequence[]]], 
-              If[VennDiagram`Private`showSetContents$75059$$, 
-               Unevaluated[
-                Sequence[
-                VennDiagram`Private`setNameA$75059, 
-                 VennDiagram`Private`setNameB$75059, 
-                 VennDiagram`Private`setNameC$75059, 
-                 VennDiagram`Private`setNameU$75059]], 
-               Unevaluated[
-                Sequence[]]], ImageSize -> {540, 300}], 
-             Short[VennDiagram`Private`expParts$75059, 3]}, Alignment -> 
-            Center], ImageSize -> {540, 500}]), 
-        "Specifications" :> {{{VennDiagram`Private`gl1$75059$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl2$75059$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl3$75059$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl4$75059$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl5$75059$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl6$75059$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl7$75059$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl8$75059$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl9$75059$$, 1}, 
-           ControlType -> None}, {{
-           VennDiagram`Private`showSetSizes$75059$$, True, 
-            "show set sizes"}, {True, False}}, {{
-           VennDiagram`Private`showSetContents$75059$$, True, 
-            "show set contents"}, {True, False}}}, 
-        "Options" :> {TrackedSymbols -> True}, "DefaultOptions" :> {}],
-       ImageSizeCache->{591., {307., 314.}},
-       SingleEvaluation->True],
-      Deinitialization:>None,
-      DynamicModuleValues:>{},
-      Initialization:>((VennDiagram`Private`k$75059 = 12; If[
-          Or[{1, 2, 3} === "All", {1, 2, 3} === All], 
-          VennDiagram`Private`listU$75059 = 
-          Union[{1, 4, 3}, {5, 4, 6}, {7, 8}], 
-          VennDiagram`Private`listU$75059 = {1, 2, 3}]); 
-       Typeset`initDone$$ = True),
-      SynchronousInitialization->True,
-      UnsavedVariables:>{Typeset`initDone$$},
-      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-     Deployed->True,
-     StripOnInput->False],
-    Manipulate`InterpretManipulate[1]], ",", 
-   TagBox[
-    StyleBox[
-     DynamicModuleBox[{VennDiagram`Private`gl21$75060$$ = 1, 
-      VennDiagram`Private`gl22$75060$$ = 1, VennDiagram`Private`gl23$75060$$ =
-       1, VennDiagram`Private`gl24$75060$$ = 1, 
-      VennDiagram`Private`gl25$75060$$ = 1, 
-      VennDiagram`Private`showSetContents$75060$$ = True, 
-      VennDiagram`Private`showSetSizes$75060$$ = True, Typeset`show$$ = True, 
-      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-      "\"untitled\"", Typeset`specs$$ = {{{
-         Hold[VennDiagram`Private`gl21$75060$$], 1}}, {{
-         Hold[VennDiagram`Private`gl22$75060$$], 1}}, {{
-         Hold[VennDiagram`Private`gl23$75060$$], 1}}, {{
-         Hold[VennDiagram`Private`gl24$75060$$], 1}}, {{
-         Hold[VennDiagram`Private`gl25$75060$$], 1}}, {{
-         Hold[VennDiagram`Private`showSetSizes$75060$$], True, 
-         "show set sizes"}, {True, False}}, {{
-         Hold[VennDiagram`Private`showSetContents$75060$$], True, 
-         "show set contents"}, {True, False}}}, Typeset`size$$ = {
-      540., {246., 254.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-      Typeset`skipInitDone$$ = False, 
-      VennDiagram`Private`showSetSizes$75060$75090$$ = False, 
-      VennDiagram`Private`showSetContents$75060$75091$$ = False}, 
-      DynamicBox[Manipulate`ManipulateBoxes[
-       1, StandardForm, 
-        "Variables" :> {
-         VennDiagram`Private`gl21$75060$$ = 1, 
-          VennDiagram`Private`gl22$75060$$ = 1, 
-          VennDiagram`Private`gl23$75060$$ = 1, 
-          VennDiagram`Private`gl24$75060$$ = 1, 
-          VennDiagram`Private`gl25$75060$$ = 1, 
-          VennDiagram`Private`showSetContents$75060$$ = True, 
-          VennDiagram`Private`showSetSizes$75060$$ = True}, 
-        "ControllerVariables" :> {
-          Hold[
-          VennDiagram`Private`showSetSizes$75060$$, 
-           VennDiagram`Private`showSetSizes$75060$75090$$, False], 
-          Hold[
-          VennDiagram`Private`showSetContents$75060$$, 
-           VennDiagram`Private`showSetContents$75060$75091$$, False]}, 
-        "OtherVariables" :> {
-         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
-          Typeset`initDone$$, Typeset`skipInitDone$$}, 
-        "Body" :> (
-         VennDiagram`Private`expList$75060 = {
-           VennDiagram`Private`exp21$75060, VennDiagram`Private`exp22$75060, 
-            VennDiagram`Private`exp23$75060, VennDiagram`Private`exp24$75060, 
-            VennDiagram`Private`exp25$75060}; 
-         VennDiagram`Private`glList$75060 = {
-           VennDiagram`Private`gl21$75060$$, VennDiagram`Private`gl22$75060$$,
-             VennDiagram`Private`gl23$75060$$, 
-            VennDiagram`Private`gl24$75060$$, 
-            VennDiagram`Private`gl25$75060$$}; 
-         VennDiagram`Private`expParts$75060 = Apply[Union, 
-            Pick[
-            VennDiagram`Private`expList$75060, 
-             VennDiagram`Private`glList$75060, 0.8]]; 
-         VennDiagram`Private`aOnly$75060 = Graphics[{
-             EdgeForm[
-              Thickness[VennDiagram`Private`lineThickness$75060]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl21$75060$$]], 
-             Button[
-              Polygon[{
-                Join[
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060] - 1/2, 
-                   Sin[
-                   Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060]}, {
-                  VennDiagram`Private`i$75060, VennDiagram`Private`k$75060, 5 
-                   VennDiagram`Private`k$75060}], 
-                 Reverse[
-                  
-                  Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060] + 1/2, 
-                    Sin[
-                    Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060]}, {
-                   VennDiagram`Private`i$75060, 2 VennDiagram`Private`k$75060,
-                     4 VennDiagram`Private`k$75060}]]]}], 
-              VennDiagram`Private`gl21$75060$$ = 
-              1.8 - VennDiagram`Private`gl21$75060$$], 
-             Inset[
-              Text[
-               Style["A", Black, Italic, 17], FormatType -> 
-               StandardForm], {-1.4, 0.8}]}]; 
-         VennDiagram`Private`bOnly$75060 = Graphics[{
-             EdgeForm[
-              Thickness[VennDiagram`Private`lineThickness$75060]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl22$75060$$]], 
-             Button[
-              Polygon[{
-                Join[
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060] - 1/2, 
-                   Sin[
-                   Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060]}, {
-                  VennDiagram`Private`i$75060, -VennDiagram`Private`k$75060, 
-                   VennDiagram`Private`k$75060}], 
-                 Reverse[
-                  
-                  Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060] + 1/2, 
-                    Sin[
-                    Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060]}, {
-                   VennDiagram`Private`i$75060, (-2) 
-                    VennDiagram`Private`k$75060, 2 
-                    VennDiagram`Private`k$75060}]]]}], 
-              VennDiagram`Private`gl22$75060$$ = 
-              1.8 - VennDiagram`Private`gl22$75060$$], 
-             Inset[
-              Text[
-               Style["B", Black, Italic, 17], FormatType -> StandardForm], {
-              1.4, 0.8}]}]; VennDiagram`Private`aAndb$75060 = Graphics[{
-             EdgeForm[
-              Thickness[VennDiagram`Private`lineThickness$75060]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl23$75060$$]], 
-             Button[
-              Polygon[{
-                Join[
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060] - 1/2, 
-                   Sin[
-                   Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060]}, {
-                  VennDiagram`Private`i$75060, -VennDiagram`Private`k$75060, 
-                   VennDiagram`Private`k$75060}], 
-                 
-                 Table[{Cos[
-                    Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060] + 1/2, 
-                   Sin[
-                   Pi (3 VennDiagram`Private`k$75060)^(-1) 
-                    VennDiagram`Private`i$75060]}, {
-                  VennDiagram`Private`i$75060, 2 VennDiagram`Private`k$75060, 
-                   4 VennDiagram`Private`k$75060}]]}], 
-              VennDiagram`Private`gl23$75060$$ = 
-              1.8 - VennDiagram`Private`gl23$75060$$]}]; 
-         VennDiagram`Private`noneOfThem$75060 = Graphics[{
-             EdgeForm[
-              Thickness[1.3 VennDiagram`Private`lineThickness$75060]], 
-             Dynamic[
-              GrayLevel[VennDiagram`Private`gl24$75060$$]], 
-             Button[
-              
-              Polygon[{{-2, -2.3}, {2, -2.3}, {
-                2, 1.5}, {-2, 1.5}, {-2, -2.3}}], 
-              VennDiagram`Private`gl24$75060$$ = 
-              1.8 - VennDiagram`Private`gl24$75060$$], 
-             Inset[
-              Text[
-               Style["U", Black, Italic, 17], FormatType -> 
-               StandardForm], {-2.2, 1.8}]}]; 
-         VennDiagram`Private`seeExtra$75060 = Sequence[
-            Graphics[{
-              If[VennDiagram`Private`gl25$75060$$ != 1, 
-               EdgeForm[
-                Thickness[0.6 VennDiagram`Private`lineThickness$75060]], 
-               Unevaluated[
-                Sequence[]]], 
-              Dynamic[
-               GrayLevel[VennDiagram`Private`gl25$75060$$]], 
-              
-              Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {
-               2.1, -2.3}}], 
+                Style[VennDiagram`Private`n21$352095, Black, Bold, 14], 
+                FormatType -> StandardForm], {-1.2, 0.}]]; 
+           VennDiagram`Private`setSizeB$352095 = Graphics[
               Inset[
                Text[
-                Style[VennDiagram`Private`n25$75060, Red, Bold, 14], 
-                FormatType -> StandardForm], {2.3, -2.15}]}], 
-            Graphics[{
-              Opacity[0], 
-              Button[
-               
-               Polygon[{{2.1, -2.3}, {2.1, -1.9}, {2.5, -1.9}, {2.5, -2.3}, {
-                2.1, -2.3}}], VennDiagram`Private`gl25$75060$$ = 
-               1.8 - VennDiagram`Private`gl25$75060$$]}]]; 
-         VennDiagram`Private`exp21$75060 = Complement[{1, 4, 3}, {5, 4, 6}]; 
-         VennDiagram`Private`exp22$75060 = Complement[{5, 4, 6}, {1, 4, 3}]; 
-         VennDiagram`Private`exp23$75060 = Intersection[{1, 4, 3}, {5, 4, 6}]; 
-         VennDiagram`Private`exp24$75060 = 
-          Complement[VennDiagram`Private`listU$75060, 
-            Union[{1, 4, 3}, {5, 4, 6}]]; 
-         VennDiagram`Private`exp25$75060 = Complement[
-            Union[{1, 4, 3}, {5, 4, 6}], VennDiagram`Private`listU$75060]; {
-           VennDiagram`Private`n21$75060, VennDiagram`Private`n22$75060, 
-            VennDiagram`Private`n23$75060, VennDiagram`Private`n24$75060, 
-            VennDiagram`Private`n25$75060} = 
-          Map[Length, {
-            VennDiagram`Private`exp21$75060, VennDiagram`Private`exp22$75060, 
-             VennDiagram`Private`exp23$75060, VennDiagram`Private`exp24$75060,
-              VennDiagram`Private`exp25$75060}]; 
-         VennDiagram`Private`setSizeA$75060 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n21$75060, Black, Bold, 14], 
-              FormatType -> StandardForm], {-1.2, 0.}]]; 
-         VennDiagram`Private`setSizeB$75060 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n22$75060, Black, Bold, 14], 
-              FormatType -> StandardForm], {1.2, 0.}]]; 
-         VennDiagram`Private`setSizeAandB$75060 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n23$75060, Black, Bold, 14], 
-              FormatType -> StandardForm], {0., 0}]]; 
-         VennDiagram`Private`setSizeU$75060 = Graphics[
-            Inset[
-             Text[
-              Style[VennDiagram`Private`n24$75060, Black, Bold, 14], 
-              FormatType -> StandardForm], {0., 1.2}]]; 
-         VennDiagram`Private`setNameU$75060 = Graphics[
-            Inset[
-             Text[
-              Style[" = ", Black, 17], FormatType -> StandardForm], {-1.8, 
-             1.8}]]; VennDiagram`Private`setNameA$75060 = Graphics[
-            Inset[
-             Text[
-              Style["A = ", Black, 17, Italic]], {-1.6, -1.6}]]; 
-         VennDiagram`Private`setNameB$75060 = Graphics[
-            Inset[
-             Text[
-              Style["B = ", Black, 17, Italic]], {-1.6, -2.1}]]; Pane[
-           Column[{
+                Style[VennDiagram`Private`n22$352095, Black, Bold, 14], 
+                FormatType -> StandardForm], {1.2, 0.}]]; 
+           VennDiagram`Private`setSizeAandB$352095 = Graphics[
+              Inset[
+               Text[
+                Style[VennDiagram`Private`n23$352095, Black, Bold, 14], 
+                FormatType -> StandardForm], {0., 0}]]; 
+           VennDiagram`Private`setSizeU$352095 = Graphics[
+              Inset[
+               Text[
+                Style[VennDiagram`Private`n24$352095, Black, Bold, 14], 
+                FormatType -> StandardForm], {0., 1.2}]]; 
+           VennDiagram`Private`setNameU$352095 = Graphics[
+              Inset[
+               Text[
+                Style[" = ", Black, 17], FormatType -> StandardForm], {-1.8, 
+               1.8}]]; VennDiagram`Private`setNameA$352095 = Graphics[
+              Inset[
+               Text[
+                Style["A = ", Black, 17, Italic]], {-1.6, -1.6}]]; 
+           VennDiagram`Private`setNameB$352095 = Graphics[
+              Inset[
+               Text[
+                Style["B = ", Black, 17, Italic]], {-1.6, -2.1}]]; Pane[
              Show[
-             VennDiagram`Private`noneOfThem$75060, 
-              VennDiagram`Private`aOnly$75060, 
-              VennDiagram`Private`bOnly$75060, 
-              VennDiagram`Private`aAndb$75060, 
-              If[VennDiagram`Private`n25$75060 != 0, 
-               Unevaluated[VennDiagram`Private`seeExtra$75060], 
+             VennDiagram`Private`noneOfThem$352095, 
+              VennDiagram`Private`aOnly$352095, 
+              VennDiagram`Private`bOnly$352095, 
+              VennDiagram`Private`aAndb$352095, 
+              If[VennDiagram`Private`n25$352095 != 0, 
+               Unevaluated[VennDiagram`Private`seeExtra$352095], 
                Unevaluated[
                 Sequence[]]], 
-              If[VennDiagram`Private`showSetSizes$75060$$, 
+              If[VennDiagram`Private`showSetSizes$352095$$, 
                Unevaluated[
                 Sequence[
-                VennDiagram`Private`setSizeA$75060, 
-                 VennDiagram`Private`setSizeB$75060, 
-                 VennDiagram`Private`setSizeU$75060, 
-                 VennDiagram`Private`setSizeAandB$75060]], 
+                VennDiagram`Private`setSizeA$352095, 
+                 VennDiagram`Private`setSizeB$352095, 
+                 VennDiagram`Private`setSizeU$352095, 
+                 VennDiagram`Private`setSizeAandB$352095]], 
                Unevaluated[
                 Sequence[]]], 
-              If[VennDiagram`Private`showSetContents$75060$$, 
+              If[VennDiagram`Private`showSetContents$352095$$, 
                Unevaluated[
                 Sequence[
-                VennDiagram`Private`setNameA$75060, 
-                 VennDiagram`Private`setNameB$75060, 
-                 VennDiagram`Private`setNameU$75060]], 
+                VennDiagram`Private`setNameA$352095, 
+                 VennDiagram`Private`setNameB$352095, 
+                 VennDiagram`Private`setNameU$352095]], 
                Unevaluated[
                 Sequence[]]], ImageSize -> {540, 300}], 
-             Short[VennDiagram`Private`expParts$75060, 3]}, Alignment -> 
-            Center], ImageSize -> {540, 500}]), 
-        "Specifications" :> {{{VennDiagram`Private`gl21$75060$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl22$75060$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl23$75060$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl24$75060$$, 1}, 
-           ControlType -> None}, {{VennDiagram`Private`gl25$75060$$, 1}, 
-           ControlType -> None}, {{
-           VennDiagram`Private`showSetSizes$75060$$, True, 
-            "show set sizes"}, {True, False}}, {{
-           VennDiagram`Private`showSetContents$75060$$, True, 
-            "show set contents"}, {True, False}}}, 
-        "Options" :> {TrackedSymbols -> True}, "DefaultOptions" :> {}],
-       ImageSizeCache->{591., {307., 314.}},
-       SingleEvaluation->True],
-      Deinitialization:>None,
-      DynamicModuleValues:>{},
-      Initialization:>((VennDiagram`Private`k$75060 = 12; If[
-          Or["All" === "All", "All" === All], VennDiagram`Private`listU$75060 = 
-          Union[{1, 4, 3}, {5, 4, 6}], VennDiagram`Private`listU$75060 = 
-          "All"]); Typeset`initDone$$ = True),
-      SynchronousInitialization->True,
-      UnsavedVariables:>{Typeset`initDone$$},
-      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-     Deployed->True,
-     StripOnInput->False],
-    Manipulate`InterpretManipulate[1]]}], "]"}]], "Output",
- CellChangeTimes->{
-  3.6261930292910976`*^9, 3.626193345363253*^9, {3.626193397514145*^9, 
-   3.626193412443371*^9}, {3.62619350325113*^9, 3.626193524623168*^9}, {
-   3.626193602280104*^9, 3.6261936046669083`*^9}, {3.626193664165413*^9, 
-   3.626193685693451*^9}, 3.6261937336167345`*^9, 3.626193771883602*^9, 
-   3.626193954559923*^9, 3.626194070187326*^9, 3.6261941636938906`*^9, 
-   3.6261942371076193`*^9, 3.6261965201465206`*^9, {3.6261965758854184`*^9, 
-   3.626196600237061*^9}, {3.626196638254328*^9, 3.6261966848828096`*^9}, 
-   3.626197236655779*^9, 3.6261973578367915`*^9, 3.6261974590185695`*^9, {
-   3.6261975085018563`*^9, 3.6261975290158925`*^9}, 3.6261975730391693`*^9, 
-   3.6261976077648306`*^9, 3.6261976702429404`*^9, 3.626197706840605*^9, 
-   3.626435587791871*^9, 3.6264356491305666`*^9, 3.626435818810871*^9, 
-   3.626436654082496*^9, 3.626436808974825*^9, 3.6264368633284993`*^9, 
-   3.6264371234496646`*^9, 3.626437167607439*^9, {3.6264374236916*^9, 
-   3.6264374939818697`*^9}, {3.626437587211603*^9, 3.626437602484759*^9}, {
-   3.626437664911439*^9, 3.626437691419369*^9}, 3.6264379613079834`*^9, 
-   3.626438098286704*^9, 3.62643813726976*^9, 3.626438419148004*^9, 
-   3.6264384498579845`*^9, 3.6264385065109167`*^9, 3.6264386270889053`*^9, 
-   3.626438744366418*^9, {3.626438782138732*^9, 3.626438800410144*^9}, 
-   3.6264388539617405`*^9, 3.6264389156906333`*^9, 3.6264389581512623`*^9}]
+             ImageSize -> {540, 300}]), 
+          "Specifications" :> {{{VennDiagram`Private`gl21$352095$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl22$352095$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl23$352095$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl24$352095$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl25$352095$$, 1}, 
+             ControlType -> None}, {{
+             VennDiagram`Private`showSetSizes$352095$$, True, 
+              "show set sizes"}, {True, False}}, {{
+             VennDiagram`Private`showSetContents$352095$$, True, 
+              "show set contents"}, {True, False}}}, 
+          "Options" :> {TrackedSymbols -> True}, "DefaultOptions" :> {}],
+         ImageSizeCache->{591., {207., 214.}},
+         SingleEvaluation->True],
+        Deinitialization:>None,
+        DynamicModuleValues:>{},
+        Initialization:>((VennDiagram`Private`k$352095 = 12; If[
+            Or[CompressedData["
+1:eJwl1WV7EAQUBeBNOsfoZqNGdzejR43RDaNzdHc3mKCUEkqnggEKSjdKN0qn
+EkoKLw8f3nN/wTk3NDomqndgQEDALBHLjU0c4hKP+CQgIYlITBKSEkQygklO
+ClKSitSkIS3pSE8GMpKJzGQhhFCyko3s5CAnYeQiN3nISz7yU4CCFKIwRShK
+MYpTgpKUojRlKEs5ylOBilSiMuFUoSrVqE4NalKLCGpTh7rUoz6RNCCKhjSi
+MU1oSjOa04KWtKI1bWhLO9oTTQc60onOdKEr3ehOD3rSi97E0Ie+9KM/AxjI
+IAYzhKEMYzgjGMkoRjOGsYxjPBOYyCQmM4WpTGM6M5jJLGYzhw/5iI/5hE/5
+jLnM43O+YD4LWMgiFvMlX7GEpSxjOV/zDStYySpWs4a1rGM9G9jIJjbzLd+x
+ha18zw/8yE9sYzs/8ws72Mmv/MYudrOHvexjPwc4yCEOc4SjHOM4v/MHJzjJ
+KU5zhrOc4zwXuMglLnOFq/zJX1zjOje4yS1uc4e73OM+D3jI3/zDIx7zhKf8
+y3884zkveMkrXvM/bwjQ+0A+eNd/YhOHuMQjPglISCISk4SkBJGMYJKTgpSk
+IjVpSEs60pOBjGQiM1kIIZSsZCM7OchJGLnITR7yko/8FKAghShMEYpSjOKU
+oCSlKE0ZylKO8lSgIpWoTDhVqEo1qlODmtQigtrUoS71qE8kDYiiIY1oTBOa
+0ozmtKAlrWhNG9rSjvZE04GOdKIzXehKN7rTg5704t1ox9CHvvSjPwMYyCAG
+M4ShDGM4IxjJKEYzhrGMYzwTmMgkJjOFqUxjOjOYGfj+X8xmDm8BX4arGQ==
+
+              "] === "All", CompressedData["
+1:eJwl1WV7EAQUBeBNOsfoZqNGdzejR43RDaNzdHc3mKCUEkqnggEKSjdKN0qn
+EkoKLw8f3nN/wTk3NDomqndgQEDALBHLjU0c4hKP+CQgIYlITBKSEkQygklO
+ClKSitSkIS3pSE8GMpKJzGQhhFCyko3s5CAnYeQiN3nISz7yU4CCFKIwRShK
+MYpTgpKUojRlKEs5ylOBilSiMuFUoSrVqE4NalKLCGpTh7rUoz6RNCCKhjSi
+MU1oSjOa04KWtKI1bWhLO9oTTQc60onOdKEr3ehOD3rSi97E0Ie+9KM/AxjI
+IAYzhKEMYzgjGMkoRjOGsYxjPBOYyCQmM4WpTGM6M5jJLGYzhw/5iI/5hE/5
+jLnM43O+YD4LWMgiFvMlX7GEpSxjOV/zDStYySpWs4a1rGM9G9jIJjbzLd+x
+ha18zw/8yE9sYzs/8ws72Mmv/MYudrOHvexjPwc4yCEOc4SjHOM4v/MHJzjJ
+KU5zhrOc4zwXuMglLnOFq/zJX1zjOje4yS1uc4e73OM+D3jI3/zDIx7zhKf8
+y3884zkveMkrXvM/bwjQ+0A+eNd/YhOHuMQjPglISCISk4SkBJGMYJKTgpSk
+IjVpSEs60pOBjGQiM1kIIZSsZCM7OchJGLnITR7yko/8FKAghShMEYpSjOKU
+oCSlKE0ZylKO8lSgIpWoTDhVqEo1qlODmtQigtrUoS71qE8kDYiiIY1oTBOa
+0ozmtKAlrWhNG9rSjvZE04GOdKIzXehKN7rTg5704t1ox9CHvvSjPwMYyCAG
+M4ShDGM4IxjJKEYzhrGMYzwTmMgkJjOFqUxjOjOYGfj+X8xmDm8BX4arGQ==
+
+              "] === All], VennDiagram`Private`listU$352095 = 
+            Union[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+              "], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+              "]], VennDiagram`Private`listU$352095 = CompressedData["
+1:eJwl1WV7EAQUBeBNOsfoZqNGdzejR43RDaNzdHc3mKCUEkqnggEKSjdKN0qn
+EkoKLw8f3nN/wTk3NDomqndgQEDALBHLjU0c4hKP+CQgIYlITBKSEkQygklO
+ClKSitSkIS3pSE8GMpKJzGQhhFCyko3s5CAnYeQiN3nISz7yU4CCFKIwRShK
+MYpTgpKUojRlKEs5ylOBilSiMuFUoSrVqE4NalKLCGpTh7rUoz6RNCCKhjSi
+MU1oSjOa04KWtKI1bWhLO9oTTQc60onOdKEr3ehOD3rSi97E0Ie+9KM/AxjI
+IAYzhKEMYzgjGMkoRjOGsYxjPBOYyCQmM4WpTGM6M5jJLGYzhw/5iI/5hE/5
+jLnM43O+YD4LWMgiFvMlX7GEpSxjOV/zDStYySpWs4a1rGM9G9jIJjbzLd+x
+ha18zw/8yE9sYzs/8ws72Mmv/MYudrOHvexjPwc4yCEOc4SjHOM4v/MHJzjJ
+KU5zhrOc4zwXuMglLnOFq/zJX1zjOje4yS1uc4e73OM+D3jI3/zDIx7zhKf8
+y3884zkveMkrXvM/bwjQ+0A+eNd/YhOHuMQjPglISCISk4SkBJGMYJKTgpSk
+IjVpSEs60pOBjGQiM1kIIZSsZCM7OchJGLnITR7yko/8FKAghShMEYpSjOKU
+oCSlKE0ZylKO8lSgIpWoTDhVqEo1qlODmtQigtrUoS71qE8kDYiiIY1oTBOa
+0ozmtKAlrWhNG9rSjvZE04GOdKIzXehKN7rTg5704t1ox9CHvvSjPwMYyCAG
+M4ShDGM4IxjJKEYzhrGMYzwTmMgkJjOFqUxjOjOYGfj+X8xmDm8BX4arGQ==
+
+             "]]); Typeset`initDone$$ = True),
+        SynchronousInitialization->True,
+        UnsavedVariables:>{Typeset`initDone$$},
+        UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+       Deployed->True,
+       StripOnInput->False],
+      Manipulate`InterpretManipulate[1]]},
+    {
+     DynamicBox[ToBoxes[VennDiagram`Private`expParts$352095, StandardForm],
+      ImageSizeCache->{1339., {55., 15.}}]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{3.627607757538316*^9, 3.627607909669529*^9}]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"f", "=", 
+  RowBox[{"list", "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"f", " ", "//", "Length"}]}], "Input",
+ CellChangeTimes->{{3.627606205075142*^9, 3.627606255135212*^9}, {
+  3.6276063595053587`*^9, 3.6276063688953714`*^9}, {3.6276064344154634`*^9, 
+  3.627606435695465*^9}, {3.627606690586822*^9, 3.6276066927568245`*^9}, {
+  3.6276071734874983`*^9, 3.627607185807515*^9}}],
+
 Cell[BoxData[
- RowBox[{"Remove", "[", "VennDiagram", "]"}]], "Input",
- CellChangeTimes->{{3.62593515089227*^9, 3.62593515752227*^9}, {
-  3.6261925459086485`*^9, 3.6261925481082525`*^9}}]
+ RowBox[{"{", 
+  RowBox[{
+  "301", ",", "302", ",", "303", ",", "304", ",", "305", ",", "306", ",", 
+   "308", ",", "309", ",", "310", ",", "312", ",", "314", ",", "315", ",", 
+   "316", ",", "318", ",", "319", ",", "320", ",", "321", ",", "322", ",", 
+   "323", ",", "324", ",", "325", ",", "326", ",", "327", ",", "328", ",", 
+   "329", ",", "330", ",", "332", ",", "333", ",", "334", ",", "335", ",", 
+   "336", ",", "338", ",", "339", ",", "340", ",", "341", ",", "342", ",", 
+   "343", ",", "344", ",", "345", ",", "346", ",", "348", ",", "350", ",", 
+   "351", ",", "352", ",", "354", ",", "355", ",", "356", ",", "357", ",", 
+   "358", ",", "360", ",", "361", ",", "362", ",", "363", ",", "364", ",", 
+   "365", ",", "366", ",", "368", ",", "369", ",", "370", ",", "371", ",", 
+   "372", ",", "374", ",", "375", ",", "376", ",", "377", ",", "378", ",", 
+   "380", ",", "381", ",", "382", ",", "384", ",", "385", ",", "386", ",", 
+   "387", ",", "388", ",", "390", ",", "391", ",", "392", ",", "393", ",", 
+   "394", ",", "395", ",", "396", ",", "398", ",", "399", ",", "400"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.627607937629568*^9, 3.627607986439636*^9}}],
+
+Cell[BoxData["84"], "Output",
+ CellChangeTimes->{{3.627607937629568*^9, 3.627607986449636*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"VennDiagram", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{"i", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "300"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Prime", "[", "i", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "100"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Table", "[", 
+    RowBox[{"i", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "100", ",", "200"}], "}"}]}], "]"}], ",", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{"i", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "3", ",", "400"}], "}"}]}], "]"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"list", "=", 
+   RowBox[{"%", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.62760357461936*^9, 3.6276037021795387`*^9}, {
+  3.6276065432056155`*^9, 3.627606588745679*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TagBox[
+      StyleBox[
+       DynamicModuleBox[{VennDiagram`Private`gl1$351374$$ = 1., 
+        VennDiagram`Private`gl2$351374$$ = 1., 
+        VennDiagram`Private`gl3$351374$$ = 1., 
+        VennDiagram`Private`gl4$351374$$ = 1., 
+        VennDiagram`Private`gl5$351374$$ = 1., 
+        VennDiagram`Private`gl6$351374$$ = 1., 
+        VennDiagram`Private`gl7$351374$$ = 1., 
+        VennDiagram`Private`gl8$351374$$ = 1., 
+        VennDiagram`Private`gl9$351374$$ = 0.8, 
+        VennDiagram`Private`showSetContents$351374$$ = True, 
+        VennDiagram`Private`showSetSizes$351374$$ = True, Typeset`show$$ = 
+        True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+        Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+        "\"untitled\"", Typeset`specs$$ = {{{
+           Hold[VennDiagram`Private`gl1$351374$$], 1}}, {{
+           Hold[VennDiagram`Private`gl2$351374$$], 1}}, {{
+           Hold[VennDiagram`Private`gl3$351374$$], 1}}, {{
+           Hold[VennDiagram`Private`gl4$351374$$], 1}}, {{
+           Hold[VennDiagram`Private`gl5$351374$$], 1}}, {{
+           Hold[VennDiagram`Private`gl6$351374$$], 1}}, {{
+           Hold[VennDiagram`Private`gl7$351374$$], 1}}, {{
+           Hold[VennDiagram`Private`gl8$351374$$], 1}}, {{
+           Hold[VennDiagram`Private`gl9$351374$$], 1}}, {{
+           Hold[VennDiagram`Private`showSetSizes$351374$$], True, 
+           "show set sizes"}, {True, False}}, {{
+           Hold[VennDiagram`Private`showSetContents$351374$$], True, 
+           "show set contents"}, {True, False}}}, Typeset`size$$ = {
+        540., {146., 154.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        Typeset`skipInitDone$$ = False, 
+        VennDiagram`Private`showSetSizes$351374$351375$$ = False, 
+        VennDiagram`Private`showSetContents$351374$351376$$ = False}, 
+        DynamicBox[Manipulate`ManipulateBoxes[
+         1, StandardForm, 
+          "Variables" :> {
+           VennDiagram`Private`gl1$351374$$ = 1, 
+            VennDiagram`Private`gl2$351374$$ = 1, 
+            VennDiagram`Private`gl3$351374$$ = 1, 
+            VennDiagram`Private`gl4$351374$$ = 1, 
+            VennDiagram`Private`gl5$351374$$ = 1, 
+            VennDiagram`Private`gl6$351374$$ = 1, 
+            VennDiagram`Private`gl7$351374$$ = 1, 
+            VennDiagram`Private`gl8$351374$$ = 1, 
+            VennDiagram`Private`gl9$351374$$ = 1, 
+            VennDiagram`Private`showSetContents$351374$$ = True, 
+            VennDiagram`Private`showSetSizes$351374$$ = True}, 
+          "ControllerVariables" :> {
+            Hold[
+            VennDiagram`Private`showSetSizes$351374$$, 
+             VennDiagram`Private`showSetSizes$351374$351375$$, False], 
+            Hold[
+            VennDiagram`Private`showSetContents$351374$$, 
+             VennDiagram`Private`showSetContents$351374$351376$$, False]}, 
+          "OtherVariables" :> {
+           Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+            Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+            Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+            Typeset`initDone$$, Typeset`skipInitDone$$}, 
+          "Body" :> (
+           VennDiagram`Private`expList$351374 = {
+             VennDiagram`Private`exp1$351374, VennDiagram`Private`exp2$351374,
+               VennDiagram`Private`exp3$351374, 
+              VennDiagram`Private`exp4$351374, 
+              VennDiagram`Private`exp5$351374, 
+              VennDiagram`Private`exp6$351374, 
+              VennDiagram`Private`exp7$351374, 
+              VennDiagram`Private`exp8$351374, 
+              VennDiagram`Private`exp9$351374}; 
+           VennDiagram`Private`glList$351374 = {
+             VennDiagram`Private`gl1$351374$$, 
+              VennDiagram`Private`gl2$351374$$, 
+              VennDiagram`Private`gl3$351374$$, 
+              VennDiagram`Private`gl4$351374$$, 
+              VennDiagram`Private`gl5$351374$$, 
+              VennDiagram`Private`gl6$351374$$, 
+              VennDiagram`Private`gl7$351374$$, 
+              VennDiagram`Private`gl8$351374$$, 
+              VennDiagram`Private`gl9$351374$$}; 
+           VennDiagram`Private`expParts$351374 = Apply[Union, 
+              Pick[
+              VennDiagram`Private`expList$351374, 
+               VennDiagram`Private`glList$351374, 0.8]]; 
+           VennDiagram`Private`aOnly$351374 = Graphics[{
+               EdgeForm[
+                Thickness[VennDiagram`Private`lineThickness$351374]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl1$351374$$]], 
+               Button[
+                Polygon[{
+                  Join[
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 
+                    VennDiagram`Private`k$351374, 4 
+                    VennDiagram`Private`k$351374}], 
+                   Reverse[
+                    Table[{
+                    Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374], 
+                    VennDiagram`Private`d$351374 - (
+                    Sin[Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - Sqrt[3]/2)}, {
+                    VennDiagram`Private`i$351374, 2 
+                    VennDiagram`Private`k$351374, 3 
+                    VennDiagram`Private`k$351374}]], 
+                   Reverse[
+                    
+                    Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] + 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 2 
+                    VennDiagram`Private`k$351374, 3 
+                    VennDiagram`Private`k$351374}]]]}], 
+                VennDiagram`Private`gl1$351374$$ = 
+                1.8 - VennDiagram`Private`gl1$351374$$], 
+               Inset[
+                Text[
+                 Style["A", Black, Italic, 17], FormatType -> 
+                 StandardForm], {-1.4, VennDiagram`Private`d$351374 - 0.8}]}]; 
+           VennDiagram`Private`bOnly$351374 = Graphics[{
+               EdgeForm[
+                Thickness[VennDiagram`Private`lineThickness$351374]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl2$351374$$]], 
+               Button[
+                Polygon[{
+                  Join[
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 0, 
+                    VennDiagram`Private`k$351374}], 
+                   Reverse[
+                    
+                    Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] + 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, -
+                    VennDiagram`Private`k$351374, 2 
+                    VennDiagram`Private`k$351374}]], 
+                   Table[{
+                    Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374], 
+                    VennDiagram`Private`d$351374 - (
+                    Sin[Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - Sqrt[3]/2)}, {
+                    VennDiagram`Private`i$351374, 0, 
+                    VennDiagram`Private`k$351374}]]}], 
+                VennDiagram`Private`gl2$351374$$ = 
+                1.8 - VennDiagram`Private`gl2$351374$$], 
+               Inset[
+                Text[
+                 Style["B", Black, Italic, 17], FormatType -> StandardForm], {
+                1.4, VennDiagram`Private`d$351374 - 0.8}]}]; 
+           VennDiagram`Private`cOnly$351374 = Graphics[{
+               EdgeForm[
+                Thickness[VennDiagram`Private`lineThickness$351374]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl3$351374$$]], 
+               Button[
+                Polygon[{
+                  Join[
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 4 
+                    VennDiagram`Private`k$351374, 5 
+                    VennDiagram`Private`k$351374}], 
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] + 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 4 
+                    VennDiagram`Private`k$351374, 5 
+                    VennDiagram`Private`k$351374}], 
+                   Reverse[
+                    Table[{
+                    Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374], 
+                    VennDiagram`Private`d$351374 - (
+                    Sin[Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - Sqrt[3]/2)}, {
+                    VennDiagram`Private`i$351374, 3 
+                    VennDiagram`Private`k$351374, 6 
+                    VennDiagram`Private`k$351374}]]]}], 
+                VennDiagram`Private`gl3$351374$$ = 
+                1.8 - VennDiagram`Private`gl3$351374$$], 
+               Inset[
+                Text[
+                 Style["C", Black, Italic, 17], FormatType -> StandardForm], {
+                0.8, VennDiagram`Private`d$351374 - -1.8}]}]; 
+           VennDiagram`Private`aAndb$351374 = Graphics[{
+               EdgeForm[
+                Thickness[VennDiagram`Private`lineThickness$351374]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl4$351374$$]], 
+               Button[
+                Polygon[{
+                  Join[
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 0, 
+                    VennDiagram`Private`k$351374}], 
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] + 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 2 
+                    VennDiagram`Private`k$351374, 3 
+                    VennDiagram`Private`k$351374}], 
+                   Reverse[
+                    Table[{
+                    Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374], 
+                    VennDiagram`Private`d$351374 - (
+                    Sin[Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - Sqrt[3]/2)}, {
+                    VennDiagram`Private`i$351374, 
+                    VennDiagram`Private`k$351374, 2 
+                    VennDiagram`Private`k$351374}]]]}], 
+                VennDiagram`Private`gl4$351374$$ = 
+                1.8 - VennDiagram`Private`gl4$351374$$]}]; 
+           VennDiagram`Private`aAndc$351374 = Graphics[{
+               EdgeForm[
+                Thickness[VennDiagram`Private`lineThickness$351374]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl5$351374$$]], 
+               Button[
+                Polygon[{
+                  Join[
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 4 
+                    VennDiagram`Private`k$351374, 5 
+                    VennDiagram`Private`k$351374}], 
+                   Reverse[
+                    
+                    Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] + 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 3 
+                    VennDiagram`Private`k$351374, 4 
+                    VennDiagram`Private`k$351374}]], 
+                   Table[{
+                    Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374], 
+                    VennDiagram`Private`d$351374 - (
+                    Sin[Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - Sqrt[3]/2)}, {
+                    VennDiagram`Private`i$351374, 2 
+                    VennDiagram`Private`k$351374, 3 
+                    VennDiagram`Private`k$351374}]]}], 
+                VennDiagram`Private`gl5$351374$$ = 
+                1.8 - VennDiagram`Private`gl5$351374$$]}]; 
+           VennDiagram`Private`bAndc$351374 = Graphics[{
+               EdgeForm[
+                Thickness[VennDiagram`Private`lineThickness$351374]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl6$351374$$]], 
+               Button[
+                Polygon[{
+                  Join[
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 5 
+                    VennDiagram`Private`k$351374, 6 
+                    VennDiagram`Private`k$351374}], 
+                   Reverse[
+                    Table[{
+                    Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374], 
+                    VennDiagram`Private`d$351374 - (
+                    Sin[Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - Sqrt[3]/2)}, {
+                    VennDiagram`Private`i$351374, 0, 
+                    VennDiagram`Private`k$351374}]], 
+                   Reverse[
+                    
+                    Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] + 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 4 
+                    VennDiagram`Private`k$351374, 5 
+                    VennDiagram`Private`k$351374}]]]}], 
+                VennDiagram`Private`gl6$351374$$ = 
+                1.8 - VennDiagram`Private`gl6$351374$$]}]; 
+           VennDiagram`Private`allOfThem$351374 = Graphics[{
+               EdgeForm[
+                Thickness[VennDiagram`Private`lineThickness$351374]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl7$351374$$]], 
+               Button[
+                Polygon[{
+                  Join[
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 5 
+                    VennDiagram`Private`k$351374, 6 
+                    VennDiagram`Private`k$351374}], 
+                   Table[{
+                    Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374], 
+                    VennDiagram`Private`d$351374 - (
+                    Sin[Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] - Sqrt[3]/2)}, {
+                    VennDiagram`Private`i$351374, 
+                    VennDiagram`Private`k$351374, 2 
+                    VennDiagram`Private`k$351374}], 
+                   
+                   Table[{Cos[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374] + 1/2, 
+                    VennDiagram`Private`d$351374 - Sin[
+                    Pi (3 VennDiagram`Private`k$351374)^(-1) 
+                    VennDiagram`Private`i$351374]}, {
+                    VennDiagram`Private`i$351374, 3 
+                    VennDiagram`Private`k$351374, 4 
+                    VennDiagram`Private`k$351374}]]}], 
+                VennDiagram`Private`gl7$351374$$ = 
+                1.8 - VennDiagram`Private`gl7$351374$$]}]; 
+           VennDiagram`Private`noneOfThem$351374 = Graphics[{
+               EdgeForm[
+                Thickness[1.3 VennDiagram`Private`lineThickness$351374]], 
+               Dynamic[
+                GrayLevel[VennDiagram`Private`gl8$351374$$]], 
+               Button[
+                
+                Polygon[{{-2.2, -3.3}, {2.2, -3.3}, {2.2, 1.5}, {-2.2, 
+                 1.5}, {-2.2, -3.3}}], VennDiagram`Private`gl8$351374$$ = 
+                1.8 - VennDiagram`Private`gl8$351374$$], 
+               Inset[
+                Text[
+                 Style["U", Black, Italic, 17], FormatType -> 
+                 StandardForm], {-2.2, 1.8}]}]; 
+           VennDiagram`Private`seeExtra$351374 = Sequence[
+              Graphics[{
+                If[VennDiagram`Private`gl9$351374$$ != 1, 
+                 EdgeForm[
+                  Thickness[0.6 VennDiagram`Private`lineThickness$351374]], 
+                 Unevaluated[
+                  Sequence[]]], 
+                Dynamic[
+                 GrayLevel[VennDiagram`Private`gl9$351374$$]], 
+                
+                Polygon[{{2.3, -3.3}, {2.3, -2.9}, {2.7, -2.9}, {2.7, -3.3}, {
+                 2.3, -3.3}}], 
+                Inset[
+                 Text[
+                  Style[VennDiagram`Private`n9$351374, Red, Bold, 14], 
+                  FormatType -> StandardForm], {2.5, -3.15}]}], 
+              Graphics[{
+                Opacity[0], 
+                Button[
+                 
+                 Polygon[{{2.3, -3.3}, {2.3, -2.9}, {2.7, -2.9}, {
+                  2.7, -3.3}, {2.3, -3.3}}], VennDiagram`Private`gl9$351374$$ = 
+                 1.8 - VennDiagram`Private`gl9$351374$$]}]]; 
+           VennDiagram`Private`exp1$351374 = Complement[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+              "], 
+              Union[CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+               "], {100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 
+               111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 
+               123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 
+               135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 
+               147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 
+               159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 
+               171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 
+               183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 
+               195, 196, 197, 198, 199, 200}]]; 
+           VennDiagram`Private`exp2$351374 = Complement[CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+              "], 
+              
+              Union[{100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 
+               111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 
+               123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 
+               135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 
+               147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 
+               159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 
+               171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 
+               183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 
+               195, 196, 197, 198, 199, 200}, CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+               "]]]; 
+           VennDiagram`Private`exp3$351374 = 
+            Complement[{100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110,
+               111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 
+              123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135,
+               136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 
+              148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160,
+               161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 
+              173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185,
+               186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 
+              198, 199, 200}, 
+              Union[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+               "], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+               "]]]; VennDiagram`Private`exp4$351374 = Complement[
+              Intersection[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+               "], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+               "]], {100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 
+              111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123,
+               124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 
+              136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148,
+               149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 
+              161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173,
+               174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 
+              186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198,
+               199, 200}]; VennDiagram`Private`exp5$351374 = Complement[
+              Intersection[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+               "], {100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 
+               111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 
+               123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 
+               135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 
+               147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 
+               159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 
+               171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 
+               183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 
+               195, 196, 197, 198, 199, 200}], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+              "]]; VennDiagram`Private`exp6$351374 = Complement[
+              Intersection[CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+               "], {100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 
+               111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 
+               123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 
+               135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 
+               147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 
+               159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 
+               171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 
+               183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 
+               195, 196, 197, 198, 199, 200}], CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+              "]]; 
+           VennDiagram`Private`exp7$351374 = Intersection[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+              "], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+              "], {100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
+               112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 
+              124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136,
+               137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 
+              149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161,
+               162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 
+              174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186,
+               187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 
+              199, 200}]; 
+           VennDiagram`Private`exp8$351374 = 
+            Complement[VennDiagram`Private`listU$351374, 
+              Union[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+               "], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+               "], {100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 
+               111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 
+               123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 
+               135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 
+               147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 
+               159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 
+               171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 
+               183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 
+               195, 196, 197, 198, 199, 200}]]; 
+           VennDiagram`Private`exp9$351374 = Complement[
+              Union[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+               "], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+               "], {100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 
+               111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 
+               123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 
+               135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 
+               147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 
+               159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 
+               171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 
+               183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 
+               195, 196, 197, 198, 199, 200}], 
+              VennDiagram`Private`listU$351374]; {
+             VennDiagram`Private`n1$351374, VennDiagram`Private`n2$351374, 
+              VennDiagram`Private`n3$351374, VennDiagram`Private`n4$351374, 
+              VennDiagram`Private`n5$351374, VennDiagram`Private`n6$351374, 
+              VennDiagram`Private`n7$351374, VennDiagram`Private`n8$351374, 
+              VennDiagram`Private`n9$351374} = 
+            Map[Length, {
+              VennDiagram`Private`exp1$351374, 
+               VennDiagram`Private`exp2$351374, 
+               VennDiagram`Private`exp3$351374, 
+               VennDiagram`Private`exp4$351374, 
+               VennDiagram`Private`exp5$351374, 
+               VennDiagram`Private`exp6$351374, 
+               VennDiagram`Private`exp7$351374, 
+               VennDiagram`Private`exp8$351374, 
+               VennDiagram`Private`exp9$351374}]; 
+           VennDiagram`Private`setSizeA$351374 = Graphics[
+              Inset[
+               Text[
+                Style[VennDiagram`Private`n1$351374, Black, Bold, 14], 
+                FormatType -> StandardForm], {-1.2, -0.7}]]; 
+           VennDiagram`Private`setSizeB$351374 = Graphics[
+              Inset[
+               Text[
+                Style[VennDiagram`Private`n2$351374, Black, Bold, 14], 
+                FormatType -> StandardForm], {1.2, -0.7}]]; 
+           VennDiagram`Private`setSizeC$351374 = Graphics[
+              Inset[
+               Text[
+                Style[VennDiagram`Private`n3$351374, Black, Bold, 14], 
+                FormatType -> StandardForm], {0., 0.9}]]; 
+           VennDiagram`Private`setSizeAandB$351374 = Graphics[
+              Inset[
+               Text[
+                Style[VennDiagram`Private`n4$351374, Black, Bold, 14], 
+                FormatType -> StandardForm], {0., -1.2}]]; 
+           VennDiagram`Private`setSizeAandC$351374 = Graphics[
+              Inset[
+               Text[
+                Style[VennDiagram`Private`n5$351374, Black, Bold, 14], 
+                FormatType -> StandardForm], {-0.69, 0.02}]]; 
+           VennDiagram`Private`setSizeBandC$351374 = Graphics[
+              Inset[
+               Text[
+                Style[VennDiagram`Private`n6$351374, Black, Bold, 14], 
+                FormatType -> StandardForm], {0.69, 0.02}]]; 
+           VennDiagram`Private`setSizeABC$351374 = Graphics[
+              Inset[
+               Text[
+                Style[VennDiagram`Private`n7$351374, Black, Bold, 14], 
+                FormatType -> StandardForm], {0., -0.38}]]; 
+           VennDiagram`Private`setSizeU$351374 = Graphics[
+              Inset[
+               Text[
+                Style[VennDiagram`Private`n8$351374, Black, Bold, 14], 
+                FormatType -> StandardForm], {-1.6, 1.2}]]; 
+           VennDiagram`Private`setNameU$351374 = Graphics[
+              Inset[
+               Text[
+                Style[" = ", Black, 17], FormatType -> StandardForm], {-1.8, 
+               1.8}]]; VennDiagram`Private`setNameA$351374 = Graphics[
+              Inset[
+               Text[
+                Style["A = ", Black, 17, Italic]], {-1.6, -2.1}]]; 
+           VennDiagram`Private`setNameB$351374 = Graphics[
+              Inset[
+               Text[
+                Style["B = ", Black, 17, Italic]], {-1.6, -2.6}]]; 
+           VennDiagram`Private`setNameC$351374 = Graphics[
+              Inset[
+               Text[
+                Style["C = ", Black, 17, Italic]], {-1.6, -3.1}]]; Pane[
+             Show[
+             VennDiagram`Private`noneOfThem$351374, 
+              VennDiagram`Private`aOnly$351374, 
+              VennDiagram`Private`bOnly$351374, 
+              VennDiagram`Private`cOnly$351374, 
+              VennDiagram`Private`aAndb$351374, 
+              VennDiagram`Private`bAndc$351374, 
+              VennDiagram`Private`aAndc$351374, 
+              VennDiagram`Private`allOfThem$351374, 
+              If[VennDiagram`Private`n9$351374 != 0, 
+               Unevaluated[VennDiagram`Private`seeExtra$351374], 
+               Unevaluated[
+                Sequence[]]], 
+              If[VennDiagram`Private`showSetSizes$351374$$, 
+               Unevaluated[
+                Sequence[
+                VennDiagram`Private`setSizeA$351374, 
+                 VennDiagram`Private`setSizeB$351374, 
+                 VennDiagram`Private`setSizeC$351374, 
+                 VennDiagram`Private`setSizeU$351374, 
+                 VennDiagram`Private`setSizeAandB$351374, 
+                 VennDiagram`Private`setSizeBandC$351374, 
+                 VennDiagram`Private`setSizeAandC$351374, 
+                 VennDiagram`Private`setSizeABC$351374]], 
+               Unevaluated[
+                Sequence[]]], 
+              If[VennDiagram`Private`showSetContents$351374$$, 
+               Unevaluated[
+                Sequence[
+                VennDiagram`Private`setNameA$351374, 
+                 VennDiagram`Private`setNameB$351374, 
+                 VennDiagram`Private`setNameC$351374, 
+                 VennDiagram`Private`setNameU$351374]], 
+               Unevaluated[
+                Sequence[]]], ImageSize -> {540, 300}], 
+             ImageSize -> {540, 300}]), 
+          "Specifications" :> {{{VennDiagram`Private`gl1$351374$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl2$351374$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl3$351374$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl4$351374$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl5$351374$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl6$351374$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl7$351374$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl8$351374$$, 1}, 
+             ControlType -> None}, {{VennDiagram`Private`gl9$351374$$, 1}, 
+             ControlType -> None}, {{
+             VennDiagram`Private`showSetSizes$351374$$, True, 
+              "show set sizes"}, {True, False}}, {{
+             VennDiagram`Private`showSetContents$351374$$, True, 
+              "show set contents"}, {True, False}}}, 
+          "Options" :> {TrackedSymbols -> True}, "DefaultOptions" :> {}],
+         ImageSizeCache->{591., {207., 214.}},
+         SingleEvaluation->True],
+        Deinitialization:>None,
+        DynamicModuleValues:>{},
+        Initialization:>((VennDiagram`Private`k$351374 = 12; If[
+            Or[CompressedData["
+1:eJwl1WV7EAQUBeBNOsfoZqNGdzejR43RDaNzdHc3mKCUEkqnggEKSjdKN0qn
+EkoKLw8f3nN/wTk3NDomqndgQEDALBHLjU0c4hKP+CQgIYlITBKSEkQygklO
+ClKSitSkIS3pSE8GMpKJzGQhhFCyko3s5CAnYeQiN3nISz7yU4CCFKIwRShK
+MYpTgpKUojRlKEs5ylOBilSiMuFUoSrVqE4NalKLCGpTh7rUoz6RNCCKhjSi
+MU1oSjOa04KWtKI1bWhLO9oTTQc60onOdKEr3ehOD3rSi97E0Ie+9KM/AxjI
+IAYzhKEMYzgjGMkoRjOGsYxjPBOYyCQmM4WpTGM6M5jJLGYzhw/5iI/5hE/5
+jLnM43O+YD4LWMgiFvMlX7GEpSxjOV/zDStYySpWs4a1rGM9G9jIJjbzLd+x
+ha18zw/8yE9sYzs/8ws72Mmv/MYudrOHvexjPwc4yCEOc4SjHOM4v/MHJzjJ
+KU5zhrOc4zwXuMglLnOFq/zJX1zjOje4yS1uc4e73OM+D3jI3/zDIx7zhKf8
+y3884zkveMkrXvM/bwjQ+0A+eNd/YhOHuMQjPglISCISk4SkBJGMYJKTgpSk
+IjVpSEs60pOBjGQiM1kIIZSsZCM7OchJGLnITR7yko/8FKAghShMEYpSjOKU
+oCSlKE0ZylKO8lSgIpWoTDhVqEo1qlODmtQigtrUoS71qE8kDYiiIY1oTBOa
+0ozmtKAlrWhNG9rSjvZE04GOdKIzXehKN7rTg5704t1ox9CHvvSjPwMYyCAG
+M4ShDGM4IxjJKEYzhrGMYzwTmMgkJjOFqUxjOjOYGfj+X8xmDm8BX4arGQ==
+
+              "] === "All", CompressedData["
+1:eJwl1WV7EAQUBeBNOsfoZqNGdzejR43RDaNzdHc3mKCUEkqnggEKSjdKN0qn
+EkoKLw8f3nN/wTk3NDomqndgQEDALBHLjU0c4hKP+CQgIYlITBKSEkQygklO
+ClKSitSkIS3pSE8GMpKJzGQhhFCyko3s5CAnYeQiN3nISz7yU4CCFKIwRShK
+MYpTgpKUojRlKEs5ylOBilSiMuFUoSrVqE4NalKLCGpTh7rUoz6RNCCKhjSi
+MU1oSjOa04KWtKI1bWhLO9oTTQc60onOdKEr3ehOD3rSi97E0Ie+9KM/AxjI
+IAYzhKEMYzgjGMkoRjOGsYxjPBOYyCQmM4WpTGM6M5jJLGYzhw/5iI/5hE/5
+jLnM43O+YD4LWMgiFvMlX7GEpSxjOV/zDStYySpWs4a1rGM9G9jIJjbzLd+x
+ha18zw/8yE9sYzs/8ws72Mmv/MYudrOHvexjPwc4yCEOc4SjHOM4v/MHJzjJ
+KU5zhrOc4zwXuMglLnOFq/zJX1zjOje4yS1uc4e73OM+D3jI3/zDIx7zhKf8
+y3884zkveMkrXvM/bwjQ+0A+eNd/YhOHuMQjPglISCISk4SkBJGMYJKTgpSk
+IjVpSEs60pOBjGQiM1kIIZSsZCM7OchJGLnITR7yko/8FKAghShMEYpSjOKU
+oCSlKE0ZylKO8lSgIpWoTDhVqEo1qlODmtQigtrUoS71qE8kDYiiIY1oTBOa
+0ozmtKAlrWhNG9rSjvZE04GOdKIzXehKN7rTg5704t1ox9CHvvSjPwMYyCAG
+M4ShDGM4IxjJKEYzhrGMYzwTmMgkJjOFqUxjOjOYGfj+X8xmDm8BX4arGQ==
+
+              "] === All], VennDiagram`Private`listU$351374 = 
+            Union[CompressedData["
+1:eJwl1FO4EAYYBuBzsm2dTrZdW7WsZbtVy3bLtWxr2bat5WVjyzZXrfc8u3i/
+//a7+f7gJu2rtAsMCAjIJEJuKEIThrCEIzwRiEgkIhOFqEQjOjGISSxiE4e4
+xCM+CUhIIhKThKQkI4jkBJOClKQiNWlISzrSk4GMIX3JTBayko3s5CAnuchN
+HvKSj/wUoCCF+IEfKUwRivITxShOCUpSitKUoSzlKE8FfqYilahMFapSjerU
+oCa1qE0d6lKP+jSgIY1oTBN+oSnNaM6vtKAlrWhNG9rSjvZ0oCOd6EwXutKN
+7vSgJ73ozW/0oS/96M8ABjKIwQzhd4YyjOGMYCSjGM0YxjKO8UxgIpOYzBSm
+Mo3pzGAms5jNH8xhLvOYzwIWsojFLGEpy1jOClayitWsYS3rWM8GNrKJzWxh
+K9vYzg52sovd7GEv+9jPAQ5yiMMc4U+OcozjnOAkpzjNX5zhLOc4zwUuconL
+XOEq17jODW5yi9v8zT/c4S73uM8DHvKIxzzhKc94zgte8orXvOEt73jPBz7y
+ic/8yxe+8o3/CBl/IKEITRjCEo7wRCAikYhMFKISjejEICaxiE0c4hKP+CQg
+IYlITBKSkowgkhNMClKSitSkIS3pSE8GMgb+/6++Az6VhWw=
+              "], CompressedData["
+1:eJwN0aFKQwEAQNE3RYaMISIyhgwxLAyDQURElgxjLIiaRAwTZUF0GEyGBTGI
+GAwiC0sPMcmQMQwGWRAxiGEfsCAiYpBhMIyBJ5wPuNyprfLqfiQIgm0GGGSI
+KDHijDJGghSTpMkwzQxzLJJliRx5llljnSI7lNhljwMqHHPKGZdcUSPkhlsa
+NHmkxRPPtOnwzgdf/NClR0RglDgjjJNkgjSzzLNAlgIrbLBJkRJlDjmiwgnn
+XFAl5Jo6d9zzQIsXXnmjTYdPvvnljz7DJsRI8Q+xrC+O
+              "], {100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
+               112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 
+              124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136,
+               137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 
+              149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161,
+               162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 
+              174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186,
+               187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 
+              199, 200}], VennDiagram`Private`listU$351374 = CompressedData["
+1:eJwl1WV7EAQUBeBNOsfoZqNGdzejR43RDaNzdHc3mKCUEkqnggEKSjdKN0qn
+EkoKLw8f3nN/wTk3NDomqndgQEDALBHLjU0c4hKP+CQgIYlITBKSEkQygklO
+ClKSitSkIS3pSE8GMpKJzGQhhFCyko3s5CAnYeQiN3nISz7yU4CCFKIwRShK
+MYpTgpKUojRlKEs5ylOBilSiMuFUoSrVqE4NalKLCGpTh7rUoz6RNCCKhjSi
+MU1oSjOa04KWtKI1bWhLO9oTTQc60onOdKEr3ehOD3rSi97E0Ie+9KM/AxjI
+IAYzhKEMYzgjGMkoRjOGsYxjPBOYyCQmM4WpTGM6M5jJLGYzhw/5iI/5hE/5
+jLnM43O+YD4LWMgiFvMlX7GEpSxjOV/zDStYySpWs4a1rGM9G9jIJjbzLd+x
+ha18zw/8yE9sYzs/8ws72Mmv/MYudrOHvexjPwc4yCEOc4SjHOM4v/MHJzjJ
+KU5zhrOc4zwXuMglLnOFq/zJX1zjOje4yS1uc4e73OM+D3jI3/zDIx7zhKf8
+y3884zkveMkrXvM/bwjQ+0A+eNd/YhOHuMQjPglISCISk4SkBJGMYJKTgpSk
+IjVpSEs60pOBjGQiM1kIIZSsZCM7OchJGLnITR7yko/8FKAghShMEYpSjOKU
+oCSlKE0ZylKO8lSgIpWoTDhVqEo1qlODmtQigtrUoS71qE8kDYiiIY1oTBOa
+0ozmtKAlrWhNG9rSjvZE04GOdKIzXehKN7rTg5704t1ox9CHvvSjPwMYyCAG
+M4ShDGM4IxjJKEYzhrGMYzwTmMgkJjOFqUxjOjOYGfj+X8xmDm8BX4arGQ==
+
+             "]]); Typeset`initDone$$ = True),
+        SynchronousInitialization->True,
+        UnsavedVariables:>{Typeset`initDone$$},
+        UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+       Deployed->True,
+       StripOnInput->False],
+      Manipulate`InterpretManipulate[1]]},
+    {
+     DynamicBox[ToBoxes[VennDiagram`Private`expParts$351374, StandardForm],
+      ImageSizeCache->{1068., {3., 11.}}]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{
+  3.6276037052295427`*^9, 3.6276039193698425`*^9, 3.627603963769905*^9, 
+   3.6276057665345283`*^9, 3.627605852534649*^9, 3.627605915754737*^9, {
+   3.6276060052148623`*^9, 3.6276060388449097`*^9}, {3.6276060811149683`*^9, 
+   3.6276061889251194`*^9}, {3.627606306385284*^9, 3.6276063346653233`*^9}, {
+   3.627606443245476*^9, 3.627606485835535*^9}, 3.6276065598556385`*^9, 
+   3.627606590135681*^9, {3.6276073375377274`*^9, 3.6276073489777436`*^9}, 
+   3.627607444117877*^9, 3.6276076446281576`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"f", "=", 
+  RowBox[{"list", "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"f", " ", "//", "Length"}]}], "Input",
+ CellChangeTimes->{{3.627606205075142*^9, 3.627606255135212*^9}, {
+  3.6276063595053587`*^9, 3.6276063688953714`*^9}, {3.6276064344154634`*^9, 
+  3.627606435695465*^9}, {3.627606690586822*^9, 3.6276066927568245`*^9}, {
+  3.6276071734874983`*^9, 3.627607185807515*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "2", ",", "401", ",", "409", ",", "419", ",", "421", ",", "431", 
+   ",", "433", ",", "439", ",", "443", ",", "449", ",", "457", ",", "461", 
+   ",", "463", ",", "467", ",", "479", ",", "487", ",", "491", ",", "499", 
+   ",", "503", ",", "509", ",", "521", ",", "523", ",", "541"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.6276062060651436`*^9, 3.6276062241151686`*^9}, 
+   3.627606255705213*^9, 3.627606309405288*^9, {3.6276063508953466`*^9, 
+   3.627606369465372*^9}, 3.6276064089954276`*^9, 3.6276064674355097`*^9, 
+   3.6276064976255517`*^9, 3.627606601886698*^9, {3.6276066809368086`*^9, 
+   3.627606731196879*^9}, {3.6276071685674915`*^9, 3.6276071866075163`*^9}, {
+   3.6276074577278957`*^9, 3.627607492957945*^9}, {3.6276076786882052`*^9, 
+   3.6276077213282647`*^9}}],
+
+Cell[BoxData["24"], "Output",
+ CellChangeTimes->{{3.6276062060651436`*^9, 3.6276062241151686`*^9}, 
+   3.627606255705213*^9, 3.627606309405288*^9, {3.6276063508953466`*^9, 
+   3.627606369465372*^9}, 3.6276064089954276`*^9, 3.6276064674355097`*^9, 
+   3.6276064976255517`*^9, 3.627606601886698*^9, {3.6276066809368086`*^9, 
+   3.627606731196879*^9}, {3.6276071685674915`*^9, 3.6276071866075163`*^9}, {
+   3.6276074577278957`*^9, 3.627607492957945*^9}, {3.6276076786882052`*^9, 
+   3.6276077213382645`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"f", " ", "//", "Length"}], "\[IndentingNewLine]", 
+ RowBox[{"list", " ", "//", 
+  "Length"}], "\[IndentingNewLine]", "f", "\[IndentingNewLine]", "list"}], \
+"Input",
+ CellChangeTimes->{{3.6276063758453813`*^9, 3.627606392905405*^9}}],
+
+Cell[BoxData["158"], "Output",
+ CellChangeTimes->{3.6276064127354326`*^9, 3.627606500715556*^9, 
+  3.627606626496732*^9}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.6276064127354326`*^9, 3.627606500715556*^9, 
+  3.627606626496732*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "4", ",", "6", ",", "8", ",", "9", ",", "10", ",", "12", ",", 
+   "14", ",", "15", ",", "16", ",", "18", ",", "20", ",", "21", ",", "22", 
+   ",", "24", ",", "25", ",", "26", ",", "27", ",", "28", ",", "30", ",", 
+   "32", ",", "33", ",", "34", ",", "35", ",", "36", ",", "38", ",", "39", 
+   ",", "40", ",", "42", ",", "44", ",", "45", ",", "46", ",", "48", ",", 
+   "49", ",", "50", ",", "51", ",", "52", ",", "54", ",", "55", ",", "56", 
+   ",", "57", ",", "58", ",", "60", ",", "62", ",", "63", ",", "64", ",", 
+   "65", ",", "66", ",", "68", ",", "69", ",", "70", ",", "72", ",", "74", 
+   ",", "75", ",", "76", ",", "77", ",", "78", ",", "80", ",", "81", ",", 
+   "82", ",", "84", ",", "85", ",", "86", ",", "87", ",", "88", ",", "90", 
+   ",", "91", ",", "92", ",", "93", ",", "94", ",", "95", ",", "96", ",", 
+   "98", ",", "99", ",", "201", ",", "202", ",", "203", ",", "204", ",", 
+   "205", ",", "206", ",", "207", ",", "208", ",", "209", ",", "210", ",", 
+   "212", ",", "213", ",", "214", ",", "215", ",", "216", ",", "217", ",", 
+   "218", ",", "219", ",", "220", ",", "221", ",", "222", ",", "224", ",", 
+   "225", ",", "226", ",", "228", ",", "230", ",", "231", ",", "232", ",", 
+   "234", ",", "235", ",", "236", ",", "237", ",", "238", ",", "240", ",", 
+   "242", ",", "243", ",", "244", ",", "245", ",", "246", ",", "247", ",", 
+   "248", ",", "249", ",", "250", ",", "252", ",", "253", ",", "254", ",", 
+   "255", ",", "256", ",", "258", ",", "259", ",", "260", ",", "261", ",", 
+   "262", ",", "264", ",", "265", ",", "266", ",", "267", ",", "268", ",", 
+   "270", ",", "272", ",", "273", ",", "274", ",", "275", ",", "276", ",", 
+   "278", ",", "279", ",", "280", ",", "282", ",", "284", ",", "285", ",", 
+   "286", ",", "287", ",", "288", ",", "289", ",", "290", ",", "291", ",", 
+   "292", ",", "294", ",", "295", ",", "296", ",", "297", ",", "298", ",", 
+   "299", ",", "300"}], "}"}]], "Output",
+ CellChangeTimes->{3.6276064127354326`*^9, 3.627606500715556*^9, 
+  3.627606626496732*^9}],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[VennDiagram`Private`expParts$348093, StandardForm],
+  ImageSizeCache->{1752., {3., 11.}}]], "Output",
+ CellChangeTimes->{3.6276064127354326`*^9, 3.627606500715556*^9, 
+  3.627606626496732*^9}]
+}, Open  ]]
 },
 WindowSize->{1902, 918},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -939,11 +1598,33 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[557, 20, 158, 3, 35, "Input",
+ InitializationCell->True],
 Cell[CellGroupData[{
-Cell[579, 22, 1457, 31, 61, "Input"],
-Cell[2039, 55, 41869, 859, 638, "Output"]
+Cell[740, 27, 780, 23, 61, "Input"],
+Cell[1523, 52, 23642, 467, 513, "Output"]
 }, Open  ]],
-Cell[43923, 917, 186, 3, 35, "Input"]
+Cell[CellGroupData[{
+Cell[25202, 524, 436, 8, 61, "Input"],
+Cell[25641, 534, 1185, 18, 86, "Output"],
+Cell[26829, 554, 95, 1, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26961, 560, 915, 27, 61, "Input"],
+Cell[27879, 589, 47835, 895, 457, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75751, 1489, 436, 8, 61, "Input"],
+Cell[76190, 1499, 831, 14, 35, "Output"],
+Cell[77024, 1515, 505, 7, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77566, 1527, 258, 5, 111, "Input"],
+Cell[77827, 1534, 121, 2, 35, "Output"],
+Cell[77951, 1538, 119, 2, 35, "Output"],
+Cell[78073, 1542, 2064, 30, 111, "Output"],
+Cell[80140, 1574, 226, 4, 35, "Output"]
+}, Open  ]]
 }
 ]
 *)
