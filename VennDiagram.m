@@ -179,7 +179,7 @@ VennDiagram[listA_, listB_, listUin_] /; (Head[listA] == List && Head[listB] == 
 		TrackedSymbols -> True,
 		Initialization :> (
 			k = 12;
-			If[ listUin === "All" || listUin === All, listU= Union[listA, listB], listU= listUin]
+			If[ MatchQ[listUin, "All" | All], listU= Union[listA, listB], listU= listUin]
 		)
 	],
 	Dynamic[expParts]
@@ -439,7 +439,7 @@ VennDiagram[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]:
 		TrackedSymbols -> True,
 		Initialization :> (
 			k = 12;
-			If[ listUin === "All" || listUin === All, listU= Union[listA, listB, listC], listU= listUin]
+			If[ MatchQ[listUin, "All" | All], listU= Union[listA, listB, listC], listU= listUin]
 		)
 	],
 	Dynamic[expParts]
