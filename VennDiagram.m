@@ -187,7 +187,7 @@ VennDiagram[listA_, listB_, listUin_] /; (Head[listA] == List && Head[listB] == 
 ]
 
 (* Three-plus-one argument form *)
-VennDiagram[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]:= Module[
+VennDiagram[listA_, listB_, listC_, listUin_] /; (Head[listA] == List && Head[listB] == List && Head[listC] == List && MatchQ[listUin,  _List | "All" | All]) := Module[
 	{
 		i, k, seeExtra, d=-0.67,
 		n1, n2, n3, n4, n5, n6, n7, n8, n9, 
@@ -283,10 +283,9 @@ VennDiagram[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]:
 			Button[Polygon[{{-2.2, -3.3}, {2.2, -3.3}, {2.2, 1.5}, {-2.2, 1.5}, {-2.2, -3.3}}],
 				gl8 = 1.8 - gl8
 			],
-			Inset[ Text[
-					Style["U", Black, Italic, 17], 
-					FormatType -> StandardForm
-				], {-2.2, 1.8}  
+			Inset[	Text[Style["U", Black, Italic, 17],
+					FormatType -> StandardForm],
+					{-2.2, 1.5}, {Left, Bottom}
 			]
 		}];
 		seeExtra = Sequence[
@@ -390,29 +389,26 @@ VennDiagram[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]:
 		];
 		setNameU= Graphics[ 
 			Inset[
-				Text[
-					Style[" = ", Black, 17], 
-					FormatType -> StandardForm
-				],
-				{-1.8, 1.8}
+				Row[{ Text[Style["= ", Black, 17, Italic]], Text[Style[ToString[HoldForm[listUin]], Black, 14]] }],
+				{-1.9, 1.5}, {Left, Bottom}
 			]
 		];
 		setNameA= Graphics[
 			Inset[
-				Text[Style["A = ", Black, 17, Italic]],
-				{-1.6, -2.1}
+				Row[{ Text[Style["A= ", Black, 17, Italic]], Text[Style[ToString[HoldForm[listA]], Black, 14]] }],
+				{-2.1, -2.3}, {Left, Bottom}
 			]
 		];
 		setNameB= Graphics[
 			Inset[
-				Text[Style["B = ", Black, 17, Italic]],
-				{-1.6, -2.6}
+				Row[{ Text[Style["B= ", Black, 17, Italic]], Text[Style[ToString[HoldForm[listB]], Black, 14]] }],
+				{-2.1, -2.8}, {Left, Bottom}
 			]
 		];
 		setNameC= Graphics[
 			Inset[
-				Text[Style["C = ", Black, 17, Italic]],
-				{-1.6, -3.1}
+				Row[{ Text[Style["C= ", Black, 17, Italic]], Text[Style[ToString[HoldForm[listC]], Black, 14]] }],
+				{-2.1, -3.3}, {Left, Bottom}
 			]
 		];
 		Pane[
