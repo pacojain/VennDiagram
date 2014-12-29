@@ -16,12 +16,23 @@ BeginPackage["VennDiagram`"]
 (* Exported symbols added here with SymbolName::usage *)
 
 VennDiagram::usage= "Produces an interactive Venn diagram graphic"
-VennDiagram2::usage= "Produces an interactive Venn diagram graphic"
+testFunc
 
 Begin["`Private`"]
 (* Implementation of the package *)
 
-(*SetAttributes[VennDiagram1, HoldAll]*)
+SetAttributes[testFunc, HoldAll]
+testFunc[listAin_, listBin_] := With[
+	{
+		listAString = ToString[HoldForm[listAin]],
+		listBString = ToString[HoldForm[listBin]]
+	},
+	Module[
+		{},
+		{listAString, listAin, listBString, listBin}
+	]
+]
+
 VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]:= Module[
 	{
 		i, k, seeExtra,
