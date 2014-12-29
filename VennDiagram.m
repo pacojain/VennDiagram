@@ -16,24 +16,14 @@ BeginPackage["VennDiagram`"]
 (* Exported symbols added here with SymbolName::usage *)
 
 VennDiagram::usage= "Produces an interactive Venn diagram graphic"
-testFunc
 
 Begin["`Private`"]
 (* Implementation of the package *)
 
-SetAttributes[testFunc, HoldAll]
-testFunc[listAin_, listBin_] := With[
-	{
-		listAString = ToString[HoldForm[listAin]],
-		listBString = ToString[HoldForm[listBin]]
-	},
-	Module[
-		{},
-		{listAString, listAin, listBString, listBin}
-	]
-]
+SetAttributes[VennDiagram, HoldAll]
 
-VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]:= Module[
+(* Two-plus-one argument form *)
+VennDiagram[listA_, listB_, listUin_] /; (Head[listA] == List && Head[listB] == List && MatchQ[listUin,  _List | "All" | All]) := Module[
 	{
 		i, k, seeExtra,
 		n21, n22, n23, n24, n25,
@@ -87,7 +77,8 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]:= Module[
 				gl24 = 1.8 - gl24
 			],
 			Inset[	Text[Style["U", Black, Italic, 17],
-					FormatType -> StandardForm], {-2.2, 1.8}
+					FormatType -> StandardForm],
+					{-2.0, 1.5}, {Left, Bottom}
 			]
 		}];
 		seeExtra = Sequence[
@@ -151,23 +142,20 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]:= Module[
 		];
 		setNameU= Graphics[ 
 			Inset[
-				Text[
-					Style[" = ", Black, 17], 
-					FormatType -> StandardForm
-				],
-				{-1.8, 1.8}
+				Row[{ Text[Style["= ", Black, 17, Italic]], Text[Style[ToString[HoldForm[listUin]], Black, 14]] }],
+				{-1.8, 1.5}, {Left, Bottom}
 			]
 		];
 		setNameA= Graphics[
 			Inset[
-				Text[Style["A = ", Black, 17, Italic]],
-				{-1.6, -1.6}
+				Row[{ Text[Style["A= ", Black, 17, Italic]], Text[Style[ToString[HoldForm[listA]], Black, 14]] }],
+				{-1.9, -1.8}, {Left, Bottom}
 			]
 		];
 		setNameB= Graphics[
 			Inset[
-				Text[Style["B = ", Black, 17, Italic]],
-				{-1.6, -2.1}
+				Row[{ Text[Style["B= ", Black, 17, Italic]], Text[Style[ToString[HoldForm[listB]], Black, 14]] }],
+				{-1.9, -2.3}, {Left, Bottom}
 			]
 		];
 		Pane[
@@ -198,6 +186,7 @@ VennDiagram[listA_List, listB_List, listUin:( _List | "All" | All)]:= Module[
 	}]
 ]
 
+(* Three-plus-one argument form *)
 VennDiagram[listA_List, listB_List, listC_List, listUin:( _List | "All" | All)]:= Module[
 	{
 		i, k, seeExtra, d=-0.67,
