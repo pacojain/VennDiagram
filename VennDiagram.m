@@ -21,6 +21,8 @@ Begin["`Private`"]
 (* Implementation of the package *)
 
 SetAttributes[VennDiagram, HoldAll]
+(* Two-argument form*)
+VennDiagram[listA_, listB_]:= VennDiagram[listA, listB, All]
 
 (* Two-plus-one argument form *)
 VennDiagram[listA_, listB_, listUin_] /; (Head[listA] == List && Head[listB] == List && MatchQ[listUin,  _List | "All" | All]) := Module[
